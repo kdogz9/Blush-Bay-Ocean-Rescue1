@@ -39,3 +39,4 @@ I've researched into aquarium floor plans and layouts to make the game as close 
 * Rarity of fish rescued 
 * more types of fish 
 * more furniture 
+* automatic treatment 
