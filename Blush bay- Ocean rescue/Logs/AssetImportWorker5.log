@@ -1,11 +1,11 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
 Built from '6000.4/staging' branch; Version is '6000.4.10f1 (feeafc12a938) revision 16706300'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-keish" at "2026-06-18T19:43:30.7830618Z"
 OS: 'Windows 11  (10.0.26200) Professional' Language: 'en' Physical Memory: 31860 MB
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-keish" at "2026-06-18T19:25:14.682989Z"
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
 System  architecture: x64
 Process architecture: x64
-Date: 2026-06-18T19:25:14Z
+Date: 2026-06-18T19:43:30Z
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\6000.4.10f1\Editor\Unity.exe
@@ -13,11 +13,11 @@ C:\Program Files\Unity\Hub\Editor\6000.4.10f1\Editor\Unity.exe
 -batchMode
 -noUpm
 -name
-AssetImportWorker0
+AssetImportWorker5
 -projectPath
 C:/GitHub/Blush-Bay-Ocean-Rescue1/Blush bay- Ocean rescue
 -logFile
-Logs/AssetImportWorker0.log
+Logs/AssetImportWorker5.log
 -srvPort
 64857
 -licensingIpc
@@ -68,12 +68,12 @@ C:/GitHub/Blush-Bay-Ocean-Rescue1/Blush bay- Ocean rescue
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [21884]  Target information:
+Player connection [33720]  Target information:
 
-Player connection [21884]  * "[IP] 192.168.1.62 [Port] 0 [Flags] 2 [Guid] 269088636 [EditorId] 269088636 [Version] 1048832 [Id] WindowsEditor(7,K-Baddie) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [33720]  * "[IP] 192.168.1.62 [Port] 0 [Flags] 2 [Guid] 818677714 [EditorId] 818677714 [Version] 1048832 [Id] WindowsEditor(7,K-Baddie) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [21884] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [21884] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [33720] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [33720] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 7
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -85,7 +85,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 3.25 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 3.05 ms, found 5 plugins.
 Initialize engine version: 6000.4.10f1 (feeafc12a938)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.4.10f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/GitHub/Blush-Bay-Ocean-Rescue1/Blush bay- Ocean rescue/Assets
@@ -103,55 +103,55 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.4.10f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.4.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.4.10f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56652
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56628
 CodeReloadManager initialized
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.10f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001423 seconds.
+Registered in 0.001212 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Package Manager log level set to [2]
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 [Licensing::Client] Error: HandshakeResponse reported an error:
 	ResponseCode: 505
 	ResponseStatus: Unsupported protocol version '1.18.1'.
 [Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-keish"
 [Licensing::IpcConnector] LicenseClient-keish channel disconnected successfully.
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-keish-6000.4.10" at "2026-06-18T19:25:15.9084863Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-keish-6000.4.10" at "2026-06-18T19:43:32.0832355Z"
 [Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 27988, path: "C:/Program Files/Unity/Hub/Editor/6000.4.10f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
 [Licensing::Module] LicensingClient has failed validation; ignoring
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.18.1+9fbee8e
-  Session Id:              ed20e53e617c4e959f0e2acb5aecb012
+  Session Id:              464e8641a05e4a1d971479aa227b10f8
   Correlation Id:          8c292b9d090c8f80e6d5a756c979698a
-  External correlation Id: 2498930459346513671
+  External correlation Id: 1689738451497750121
   Machine Id:              /RzPr2gAIPSB4NcypRRRBkxSfUM=
 [Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-keish-6000.4.10" (connect: 0.00s, validation: 0.00s, handshake: 0.01s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-keish-6000.4.10-notifications" at "2026-06-18T19:25:15.9180747Z"
-[Licensing::Module] Licensing Background thread has ended after 1.24s
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-keish-6000.4.10-notifications" at "2026-06-18T19:43:32.0903623Z"
+[Licensing::Module] Licensing Background thread has ended after 1.31s
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.287 seconds
-Domain Reload Profiling: 611ms
-	BeginReloadAssembly (82ms)
-	RebuildCommonClasses (28ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (47ms)
-	LoadAllAssembliesAndSetupDomain (154ms)
-		LoadAssemblies (79ms)
-		AnalyzeDomain (147ms)
-			TypeCache.Refresh (146ms)
-				TypeCache.ScanAssembly (136ms)
-	FinalizeReload (288ms)
+- Finished resetting the current domain, in  0.247 seconds
+Domain Reload Profiling: 550ms
+	BeginReloadAssembly (78ms)
+	RebuildCommonClasses (25ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (42ms)
+	LoadAllAssembliesAndSetupDomain (146ms)
+		LoadAssemblies (76ms)
+		AnalyzeDomain (139ms)
+			TypeCache.Refresh (138ms)
+				TypeCache.ScanAssembly (126ms)
+	FinalizeReload (248ms)
 		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (36ms)
-			BeforeProcessingInitializeOnLoad (54ms)
-			ProcessInitializeOnLoadAttributes (77ms)
-			ProcessInitializeOnLoadMethodAttributes (64ms)
+			InitializePlatformSupportModulesInManaged (31ms)
+			BeforeProcessingInitializeOnLoad (52ms)
+			ProcessInitializeOnLoadAttributes (65ms)
+			ProcessInitializeOnLoadMethodAttributes (53ms)
 ========================================================================
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
@@ -210,144 +210,160 @@ Native extension for WebGL target not found
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.523 seconds
-Domain Reload Profiling: 1098ms
-	BeginReloadAssembly (120ms)
+- Finished resetting the current domain, in  0.522 seconds
+Domain Reload Profiling: 1128ms
+	BeginReloadAssembly (157ms)
 		DisableScriptedObjects (3ms)
-		CreateAndSetChildDomain (26ms)
+		CreateAndSetChildDomain (45ms)
 	RebuildCommonClasses (24ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (45ms)
-	LoadAllAssembliesAndSetupDomain (378ms)
-		LoadAssemblies (232ms)
-		AnalyzeDomain (202ms)
-			TypeCache.Refresh (133ms)
-				TypeCache.ScanAssembly (122ms)
-			BuildScriptInfoCaches (61ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (47ms)
+	LoadAllAssembliesAndSetupDomain (368ms)
+		LoadAssemblies (238ms)
+		AnalyzeDomain (203ms)
+			TypeCache.Refresh (129ms)
+				TypeCache.ScanAssembly (118ms)
+			BuildScriptInfoCaches (66ms)
 			ResolveRequiredComponents (7ms)
-	FinalizeReload (523ms)
+	FinalizeReload (522ms)
 		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (102ms)
-			ProcessInitializeOnLoadAttributes (213ms)
-			ProcessInitializeOnLoadMethodAttributes (87ms)
-			AfterProcessingInitializeOnLoad (4ms)
+			BeforeProcessingInitializeOnLoad (95ms)
+			ProcessInitializeOnLoadAttributes (223ms)
+			ProcessInitializeOnLoadMethodAttributes (80ms)
+			AfterProcessingInitializeOnLoad (5ms)
 		AwakeInstancesAfterBackupRestoration (6ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
 Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7265 unused Assets / (5.2 MB). Loaded Objects now: 8091.
-Memory consumption went from 163.5 MB to 158.3 MB.
-Total: 8.442800 ms (FindLiveObjects: 0.684700 ms CreateObjectMapping: 0.323300 ms MarkObjects: 5.225200 ms  DeleteObjects: 2.207900 ms)
+Unloading 7265 unused Assets / (6.5 MB). Loaded Objects now: 8091.
+Memory consumption went from 165.3 MB to 158.8 MB.
+Total: 8.888400 ms (FindLiveObjects: 0.667000 ms CreateObjectMapping: 0.271000 ms MarkObjects: 5.029300 ms  DeleteObjects: 2.919400 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 256650.859638 seconds.
-  path: Assets/Assets/Flooring/Floor tile sprite sheet.png
-  importAddress: Guid(a2dac9421140c97498aa1b4dd4c9561f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Flooring/Floor tile sprite sheet.png using Guid(a2dac9421140c97498aa1b4dd4c9561f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '4defa908bf1a45116e46ac6f248228be') in 0.0771022 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7e1da26b7be4d1cd478da577667d0063 DependenciesID=ebad78cfec93bab3ed59f62d0e52e1a2 StaticDependenciesID=83157d5eae34f9bd46aa4f8ae3a1db3c 
+  Time since last request: 257777.491026 seconds.
+  path: Assets/Assets/Flooring/Floor tile sprite sheet 1_3.asset
+  importAddress: Guid(ff2c1e40e8a006a41a77c77195460003) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Flooring/Floor tile sprite sheet 1_3.asset using Guid(ff2c1e40e8a006a41a77c77195460003) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '59b4a69fe5788cba6996083a8b00a52f') in 0.0709143 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=049e3f8b6ef975d4367e94f7aeb764b7 DependenciesID=a00c044425464cf6994e413750c31746 StaticDependenciesID=ef2d128d6582d2d62ca6e490eb060b99 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 20.372831 seconds.
-  path: Assets/Assets/Flooring/Floor tile sprite sheet.png
-  importAddress: Guid(a2dac9421140c97498aa1b4dd4c9561f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Flooring/Floor tile sprite sheet.png using Guid(a2dac9421140c97498aa1b4dd4c9561f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'e491c31602c947a16bee55419e8a385b') in 0.0071995 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1025a77e0d14f90cd225ece41f12104c DependenciesID=b351ebda17776b06237c997b5330a3ef StaticDependenciesID=2981ca28ac53926db618bf9bafa5d71f 
+  Time since last request: 0.000021 seconds.
+  path: Assets/Assets/Flooring/Floor tile sprite sheet 1_4.asset
+  importAddress: Guid(fd77fea6658d3284fbeb396569374f8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Flooring/Floor tile sprite sheet 1_4.asset using Guid(fd77fea6658d3284fbeb396569374f8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'e36bd0dd1385a9e29af11d48d3d3a77e') in 0.0050172 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0f490b960b98b9c9a40625b057d8a6ce DependenciesID=f909f37760c3954c13acd772637c7649 StaticDependenciesID=f47520771f5a146c203b29fb336302c7 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.006715 seconds.
-  path: Assets/Assets/Flooring/Floor tile sprite sheet.png
-  importAddress: Guid(a2dac9421140c97498aa1b4dd4c9561f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Assets/Flooring/Floor tile sprite sheet.png using Guid(a2dac9421140c97498aa1b4dd4c9561f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '885a2e8f0bf56363b261863d7e46934e') in 0.0785262 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9d904be93d139a568595f8f9d09961b7 DependenciesID=dc9ba0462343ba6d015d8ba7b43084d7 StaticDependenciesID=6d46088da44fbc68678ff24c91d81f31 
+  Time since last request: 0.000019 seconds.
+  path: Assets/Assets/Flooring/Floor tile sprite sheet 1_11.asset
+  importAddress: Guid(1806f21d9ff0e4747950bdfdc7e0180f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Flooring/Floor tile sprite sheet 1_11.asset using Guid(1806f21d9ff0e4747950bdfdc7e0180f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '110303f328aed48002eaafbab02af11d') in 0.0051558 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=669ad894491b14a8066d9d7b094bc688 DependenciesID=001890ed02c21c861baebc9a1b4ab9b0 StaticDependenciesID=1de27ecac11f589fb90b269fa824cf33 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 18.864468 seconds.
-  path: Assets/Assets/Flooring/Floor tile sprite sheet.png
-  importAddress: Guid(a2dac9421140c97498aa1b4dd4c9561f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Flooring/Floor tile sprite sheet.png using Guid(a2dac9421140c97498aa1b4dd4c9561f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'bc5446fd1dedb5f7575d13d9913fa78a') in 0.0198813 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=268158e275eb0d9ccee0de09a7ee0fa1 DependenciesID=7d846084beb356b24b1e6f8d7bb1e1f1 StaticDependenciesID=3a3d7f1e662453a2ed8e896ecdcee8e7 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
+  Time since last request: 0.785073 seconds.
+  path: Assets/Assets/Flooring/Floor tile sprite sheet 1_4.asset
+  importAddress: Guid(fd77fea6658d3284fbeb396569374f8c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Assets/Flooring/Floor tile sprite sheet 1_4.asset using Guid(fd77fea6658d3284fbeb396569374f8c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '2d8c13594f89481327b857320bcabc2a') in 0.0669536 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=50fe2bc29461b3d0508181095358fe88 DependenciesID=f41afd57ca8beccbb774629fc9f3b2bc StaticDependenciesID=18445d2f1ee1ed71c0394c997ceccbbf 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.930162 seconds.
-  path: Assets/Assets/Flooring/Floor tile sprite sheet.png
-  importAddress: Guid(a2dac9421140c97498aa1b4dd4c9561f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Assets/Flooring/Floor tile sprite sheet.png using Guid(a2dac9421140c97498aa1b4dd4c9561f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '7914c4cd2bf921bf201e0926ce5f6ec8') in 0.0086785 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f30271aeec0afe0cf52a721a2e7fe259 DependenciesID=0ce1fc51a96426034e92d3935b671308 StaticDependenciesID=1cba5316eda2a8e8f95e861869e83f44 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
+  Time since last request: 0.000037 seconds.
+  path: Assets/Assets/Flooring/Floor tile sprite sheet 1_13.asset
+  importAddress: Guid(18d9044fc48506a41a535ca0ddcc61c3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Assets/Flooring/Floor tile sprite sheet 1_13.asset using Guid(18d9044fc48506a41a535ca0ddcc61c3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '06f8b1a502d95996a2c719079896d752') in 0.0071509 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5e1dac267d93d5e7acf3d3bd3e333ad8 DependenciesID=aa92eb14b4e2af38084c09ad96febffe StaticDependenciesID=1ccab39ead28558c16c0dff4743456ec 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 15.455659 seconds.
-  path: Assets/Assets/Flooring/Floor tile sprite sheet_0.asset
-  importAddress: Guid(165603b6d687ca444a3e3acaf3c9d85b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Flooring/Floor tile sprite sheet_0.asset using Guid(165603b6d687ca444a3e3acaf3c9d85b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '45474cc4b7d45f29988fe5dc5303d5bd') in 0.0223995 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c65134405bce265643865cfcff563958 DependenciesID=aaa9517f99399852b6770354988f710d StaticDependenciesID=afe6f8b480311ebc943e58e4c2f135ab 
+  Time since last request: 0.000029 seconds.
+  path: Assets/Assets/Flooring/Floor tile sprite sheet 1_7.asset
+  importAddress: Guid(9ef5fc08eebb89c4089930427b989905) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Assets/Flooring/Floor tile sprite sheet 1_7.asset using Guid(9ef5fc08eebb89c4089930427b989905) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f0161f83781a5ea712f83a1bd1a1c8dd') in 0.004052 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=07015e322f61b55ff6c1f770eb550e5a DependenciesID=97c8a791df41561cbfb2b3958702de3d StaticDependenciesID=ad3883efecfde009d818820106f2ee49 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 3904.917569 seconds.
+  path: Assets/Assets/Flooring/floor tile sprite sheet 2_1.asset
+  importAddress: Guid(886d6d8bd7764ed4f991993565a6f53c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Flooring/floor tile sprite sheet 2_1.asset using Guid(886d6d8bd7764ed4f991993565a6f53c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '052d6fbffa03a9706255efcf5479bd61') in 0.027759 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=95aaff3536120c754f0a052acbdcd19b DependenciesID=c37c77c19e84affbebf06e820312da8b StaticDependenciesID=ca79e4c42cc8de6bf2b193ef2c82aafc 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.964475 seconds.
+  path: Assets/Assets/Flooring/floor tile sprite sheet 2_3.asset
+  importAddress: Guid(e42b9fdb3fd77e648a516d842a22c763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Flooring/floor tile sprite sheet 2_3.asset using Guid(e42b9fdb3fd77e648a516d842a22c763) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'd8b5672920789e4b0e4a9360b440add0') in 0.0067351 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ac46154344a816556a555a7ba9799e05 DependenciesID=0bc0e9e494cd4e5ee4804816d1ef7bc0 StaticDependenciesID=f675dda26bf5df5fada4eac4430facc9 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000020 seconds.
-  path: Assets/Assets/Flooring/Floor tile sprite sheet_3.asset
-  importAddress: Guid(d0493d0519347d34aaef2859b34f5b8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Flooring/Floor tile sprite sheet_3.asset using Guid(d0493d0519347d34aaef2859b34f5b8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '6f4c4bb9e96d04dee2d6ebbe91e9e1e2') in 0.0061003 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bdca94082c9f2a555b2c04e182cef559 DependenciesID=1708b74914fad39f410919231a578425 StaticDependenciesID=43b44ebf9540cd1c6efcdd61112feb8f 
+  path: Assets/Assets/Flooring/floor tile sprite sheet 2_4.asset
+  importAddress: Guid(6457faf24b6da9846b1d237a0a5f2e09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Flooring/floor tile sprite sheet 2_4.asset using Guid(6457faf24b6da9846b1d237a0a5f2e09) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '125f717ff2ca34c3adda8b23153eadf7') in 0.0070549 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d96b9d52540be653d32ca071eed86d76 DependenciesID=fcc23cfebe92667ac01db6f59fe55830 StaticDependenciesID=517745caacb9cbe3ca3863dda736da04 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/Assets/Flooring/New Tile Palette.prefab
-  importAddress: Guid(0f2feffa85b15cb48b217f6529583dd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Flooring/New Tile Palette.prefab using Guid(0f2feffa85b15cb48b217f6529583dd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'c1c2031fa68db1e2a88df28c7ba3867c') in 0.3049023 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6f75c1e7ee0cb1faf55e61200bd00fb0 DependenciesID=357e3fda56537b45a54ffb7d03ed166d StaticDependenciesID=d4b486d6b416cdd0bfc9fd6f66ef40d0 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 41
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.529222 seconds.
-  path: Assets/Assets/Flooring/Floor tile sprite sheet_1.asset
-  importAddress: Guid(384ca8066f9ac824eba5fe601863dc58) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Assets/Flooring/Floor tile sprite sheet_1.asset using Guid(384ca8066f9ac824eba5fe601863dc58) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f7b619c2aedd760bebd817bf9e128629') in 0.0174851 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0e908fb927925bd58b3c722c5cadc0cd DependenciesID=310320072ae684d2be4e8308e7ccdce1 StaticDependenciesID=bcb47abcd17af116f704bfbf34538ad2 
+  Time since last request: 0.000021 seconds.
+  path: Assets/Assets/Flooring/floor tile sprite sheet 2_8.asset
+  importAddress: Guid(cd82241297705814f9e72edeee744988) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Assets/Flooring/floor tile sprite sheet 2_8.asset using Guid(cd82241297705814f9e72edeee744988) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '14e0aa3e33e02818e04fb639fc91dae5') in 0.0119555 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7b071342637ba8be8f7fe75f2b5b20b1 DependenciesID=1d6f911a368b9f142ce0fa7632e190be StaticDependenciesID=4ded5131dfec5d6655d593d5178cfb05 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Assets/Flooring/Floor tile sprite sheet_5.asset
-  importAddress: Guid(7fc412e50eab37347ad44d82e570c3d0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Assets/Flooring/Floor tile sprite sheet_5.asset using Guid(7fc412e50eab37347ad44d82e570c3d0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '20ec059eb023bc4d11d64351b064b40e') in 0.0049004 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7307c74c4e91a5b2649b9c1711941281 DependenciesID=81a9c27634101d2dbe674821ade010b7 StaticDependenciesID=bb47552a52528bb529402629df4f25a0 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Assets/Flooring/Floor tile sprite sheet_11.asset
-  importAddress: Guid(951b6f32a3a518445ab7100a5dab6472) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Assets/Flooring/Floor tile sprite sheet_11.asset using Guid(951b6f32a3a518445ab7100a5dab6472) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '3d3ace2c4aa6f0d03413c1391f3608e8') in 0.0069674 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d674a286a5015b8187b795d9a42ea332 DependenciesID=eff747a3a1be42f5d6e55dd7d287488c StaticDependenciesID=ee8096ecc88e4b52890742b5c7b47499 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Assets/Flooring/Floor tile sprite sheet_2.asset
-  importAddress: Guid(f960f2c8492371e4eb65e7a96f869603) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Assets/Flooring/Floor tile sprite sheet_2.asset using Guid(f960f2c8492371e4eb65e7a96f869603) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'fb86392872a20ac794a9198035d39421') in 0.0048841 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b07c7dc66c82a71348745f1ffc5bf84b DependenciesID=0b9e6702e2a9c809c23646365c5d7103 StaticDependenciesID=d020df55b1f6d9305d03d30f09f75361 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Assets/Flooring/Floor tile sprite sheet_9.asset
-  importAddress: Guid(71d3ef788f6f47f42966c0686d2822fc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Assets/Flooring/Floor tile sprite sheet_9.asset using Guid(71d3ef788f6f47f42966c0686d2822fc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '13f0c72b165946d5e0658b24a4fd8944') in 0.0045951 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3c9a05923958796fb21eb4944b751872 DependenciesID=ba474c7add55ffdf1bf772ce8cf81688 StaticDependenciesID=75656e9efd24e203e8f03f1e7085f7e2 
+  Time since last request: 0.000032 seconds.
+  path: Assets/Assets/Flooring/floor tile sprite sheet 2_0.asset
+  importAddress: Guid(7f1093da9e5778f44a348bd2cfdaafa0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Assets/Flooring/floor tile sprite sheet 2_0.asset using Guid(7f1093da9e5778f44a348bd2cfdaafa0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'a48078d0d4f017b6cae7901a4c3a4ca0') in 0.0048561 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3de45e49b787a580ba7c7aede377c651 DependenciesID=849e3f1846449f59f7ecdce96138ff3f StaticDependenciesID=ddb12256c757b90d83277d6065af583e 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000018 seconds.
+  path: Assets/Assets/Flooring/floor tile sprite sheet 2_5.asset
+  importAddress: Guid(9dc51790f92574c439bd127768b5f404) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Flooring/floor tile sprite sheet 2_5.asset using Guid(9dc51790f92574c439bd127768b5f404) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '8da22617884bb3f4bca831662a4671f1') in 0.0055054 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ee6e5ba88f8d12e45bed5509e0728cb9 DependenciesID=97d5730a98654e95c4ba37ad5375f04b StaticDependenciesID=662365c282d837c82c5b49eb0546ebdd 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Assets/Flooring/floor tile sprite sheet 2_2.asset
+  importAddress: Guid(be76dbac45ac3f34086850c303673c0d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Assets/Flooring/floor tile sprite sheet 2_2.asset using Guid(be76dbac45ac3f34086850c303673c0d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'bf0fab8acb1be0968afa496a411374df') in 0.0044106 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d25fba895379213ac096131decb3692e DependenciesID=a952164a81c1160984f26d187d28b38e StaticDependenciesID=c9060adcb65cb32a6ae5c13ec378bf89 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Assets/Flooring/floor tile sprite sheet 2_5.asset
+  importAddress: Guid(9dc51790f92574c439bd127768b5f404) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Assets/Flooring/floor tile sprite sheet 2_5.asset using Guid(9dc51790f92574c439bd127768b5f404) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '251067766f4df8f16f6af0af27478df4') in 0.0050117 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d21874bbdbc307aa71604cdd4337b405 DependenciesID=f7b233dc5303bc2bcb1edcb7ab8dd1b6 StaticDependenciesID=4eb28305e4fac7c1a2d2440b23d2c96a 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Assets/Flooring/floor tile sprite sheet 2_6.asset
+  importAddress: Guid(7177be4109680dc4a93141a3e6f4fe9f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Assets/Flooring/floor tile sprite sheet 2_6.asset using Guid(7177be4109680dc4a93141a3e6f4fe9f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '1d936d23c5075831d4569d7d633c325f') in 0.0054548 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ec950db6293a97e27dbf2302cba97190 DependenciesID=1ef70a7fb5ae7e6ed3a9d5a2177fe114 StaticDependenciesID=e35e0bd57337f85a415539f809de6258 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
   path: Assets/Assets/Flooring/New Tile Palette.prefab
   importAddress: Guid(0f2feffa85b15cb48b217f6529583dd6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Assets/Flooring/New Tile Palette.prefab using Guid(0f2feffa85b15cb48b217f6529583dd6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'd9476881252a0cbd33a00cfa1d8a0a8e') in 0.0103185 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5d7c7a3e0b800b9c1522fa960c8fe81b DependenciesID=1cab3cddba0a0d6646b0683eb596d0a0 StaticDependenciesID=1363919e0c962f12a3fd9117c2256ee8 
+Start importing Assets/Assets/Flooring/New Tile Palette.prefab using Guid(0f2feffa85b15cb48b217f6529583dd6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'ec097b0fcb1a05e613d25074828696c2') in 0.0547851 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=424383a0660c4694a8219f8f87738aab DependenciesID=71d85c2377783d4c79179cbd11162af4 StaticDependenciesID=5a60911f319717924c0a48b8fd96f489 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
