@@ -47,6 +47,10 @@ public class FishInfoUI : MonoBehaviour
         // Refresh UI
         UpdateUI();
     }
+    
+   
+    
+   
 
     private void UpdateUI()
     {
@@ -95,10 +99,10 @@ public class FishInfoUI : MonoBehaviour
         healthSlider.maxValue = currentTank.MaxHealth;
         healthSlider.value = currentTank.Health;
 
-        // Treat works while fish exists
-        treatButton.interactable = true;
+        // Treat only works if the fish is not fully healed
+        treatButton.interactable = !currentTank.ReadyToRelease;
 
-        // Release only works when fish is fully healed
+// Release only works when the fish is fully healed
         releaseButton.interactable = currentTank.ReadyToRelease;
 
         // Close always works
@@ -107,8 +111,22 @@ public class FishInfoUI : MonoBehaviour
 
     private void TreatFish()
     {
-        currentTank.TreatFish();
+        // If no tank is selected, stop here
+        if (currentTank == null) return;
 
+        // If the tank is empty, stop here
+        if (!currentTank.HasFish) return;
+
+        // If the fish is already fully healed, do not treat again
+        if (currentTank.ReadyToRelease) return;
+
+        // Start the ointment mini game
+        OintmentMiniGame.Instance.StartMiniGame(currentTank);
+    }
+    
+    public void RefreshUI()
+    {
+        // This lets the mini game update the fish panel
         UpdateUI();
     }
 
@@ -125,4 +143,6 @@ public class FishInfoUI : MonoBehaviour
 
         currentTank = null;
     }
+    
+    
 }

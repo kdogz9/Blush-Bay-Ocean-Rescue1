@@ -30,22 +30,17 @@ public class Tank : MonoBehaviour
 
     public void HealFish(int healAmount)
     {
-        // If there is no fish, stop here
+        // If there is no fish in the tank, stop here
         if (!hasFish) return;
 
-        // Add health
+        // Add healing to the fish
         health += healAmount;
 
-        // Stop health going above the max health
+        // Stop the health going above the max health
         health = Mathf.Clamp(health, 0, maxHealth);
     }
     
-    public void TreatFish()
-    {
-        // Old simple treatment button
-        // This can still be useful for testing
-        HealFish(20);
-    } 
+    
 
     public Sprite FishSpriteImage
     {
