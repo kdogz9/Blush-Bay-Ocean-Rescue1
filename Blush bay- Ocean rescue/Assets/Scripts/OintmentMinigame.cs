@@ -1,11 +1,12 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using TMPro;
 
 public class OintmentMiniGame : MonoBehaviour
 {
-    // This lets other scripts start this mini game easily
+    // Lets other scripts start this mini game
     public static OintmentMiniGame Instance;
 
     [Header("UI Objects")]
@@ -18,6 +19,10 @@ public class OintmentMiniGame : MonoBehaviour
     [SerializeField] private TMP_Text titleText;
     [SerializeField] private TMP_Text resultText;
 
+    [Header("Fish Visual")]
+    [SerializeField] private Image miniGameFishImage;
+    [SerializeField] private GameObject ointmentEffect;
+
     [Header("Mini Game Settings")]
     [SerializeField] private float markerSpeed = 220f;
 
@@ -25,7 +30,7 @@ public class OintmentMiniGame : MonoBehaviour
     [SerializeField] private int goodHealAmount = 20;
     [SerializeField] private int missHealAmount = 5;
 
-    // This stores the tank/fish we are treating
+    // This stores the tank/fish we are currently treating
     private Tank currentTank;
 
     // Is the mini game currently running?
@@ -36,22 +41,28 @@ public class OintmentMiniGame : MonoBehaviour
 
     private void Awake()
     {
-        // Save this mini game as the main instance
+        // Save this as the main mini game
         Instance = this;
 
-        // Hide the mini game when the game starts
+        // Hide the mini game at the start
         panel.SetActive(false);
+
+        // Hide the ointment mark at the start
+        if (ointmentEffect != null)
+        {
+            ointmentEffect.SetActive(false);
+        }
     }
 
     private void Update()
     {
-        // If the mini game is not running, do nothing
+        // Do nothing if the mini game is not running
         if (!gameRunning) return;
 
-        // Move the marker along the timing bar
+        // Move marker left and right
         MoveMarker();
 
-        // If the player presses SPACE, try to apply ointment
+        // Press SPACE to apply ointment
         if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             ApplyOintment();
@@ -60,23 +71,39 @@ public class OintmentMiniGame : MonoBehaviour
 
     public void StartMiniGame(Tank tank)
     {
-        // Safety check: if no tank was given, stop here
+        // If no tank was given, stop here
         if (tank == null) return;
 
-        // If the tank is empty, stop here
+        // If tank has no fish, stop here
         if (!tank.HasFish) return;
+
+        // If fish is already healed, stop here
+        if (tank.ReadyToRelease) return;
 
         // Remember which tank we are treating
         currentTank = tank;
 
-        // Show the mini game panel
+        // Show the panel
         panel.SetActive(true);
 
-        // Set the text
+        // Set title and clear old result
         titleText.text = "APPLY OINTMENT";
         resultText.text = "";
 
-        // Put the marker at the far left of the bar
+        // Show the fish sprite from the tank on the mini game UI
+        if (miniGameFishImage != null)
+        {
+            miniGameFishImage.sprite = currentTank.FishSpriteImage;
+            miniGameFishImage.gameObject.SetActive(currentTank.FishSpriteImage != null);
+        }
+
+        // Hide ointment mark until player presses SPACE
+        if (ointmentEffect != null)
+        {
+            ointmentEffect.SetActive(false);
+        }
+
+        // Put marker at left side of the bar
         float leftSide = -timingBar.rect.width / 2f;
         marker.anchoredPosition = new Vector2(leftSide, marker.anchoredPosition.y);
 
@@ -89,91 +116,159 @@ public class OintmentMiniGame : MonoBehaviour
 
     private void MoveMarker()
     {
-        // Half of the timing bar width
+        // Half the width of the timing bar
         float halfBarWidth = timingBar.rect.width / 2f;
 
-        // Half of the marker width
+        // Half the width of the marker
         float halfMarkerWidth = marker.rect.width / 2f;
 
-        // This keeps the marker inside the bar edges
+        // This stops marker going past the bar edge
         float maxX = halfBarWidth - halfMarkerWidth;
 
-        // Work out the marker's new X position
+        // Move marker
         float newX = marker.anchoredPosition.x + moveDirection * markerSpeed * Time.deltaTime;
 
-        // If the marker reaches the right side, bounce back left
+        // Bounce off right edge
         if (newX > maxX)
         {
             newX = maxX;
             moveDirection = -1;
         }
 
-        // If the marker reaches the left side, bounce back right
+        // Bounce off left edge
         if (newX < -maxX)
         {
             newX = -maxX;
             moveDirection = 1;
         }
 
-        // Apply the new marker position
+        // Apply new marker position
         marker.anchoredPosition = new Vector2(newX, marker.anchoredPosition.y);
     }
 
     private void ApplyOintment()
     {
-        // Stop the marker when the player presses SPACE
+        // Stop the marker
         gameRunning = false;
 
-        // Get the marker position
+        // Show ointment effect on the fish
+        ShowOintmentEffect();
+
+        // Marker position
         float markerX = marker.anchoredPosition.x;
 
-        // Get the calm zone position
+        // Calm zone position
         float calmZoneX = calmZone.anchoredPosition.x;
 
-        // Work out how far the marker is from the centre of the calm zone
+        // Distance from marker to centre of calm zone
         float distanceFromCentre = Mathf.Abs(markerX - calmZoneX);
 
-        // Half of the calm zone width
+        // Half of green zone width
         float halfCalmZoneWidth = calmZone.rect.width / 2f;
 
-        // Very centre of the calm zone = perfect
+        // Very centre of the green zone counts as perfect
         float perfectZone = halfCalmZoneWidth * 0.35f;
 
         if (distanceFromCentre <= perfectZone)
         {
-            // Best timing
+            // Best result
             currentTank.HealFish(perfectHealAmount);
-            resultText.text = "PERFECT APPLICATION!";
+            resultText.text = "PERFECT!";
         }
         else if (distanceFromCentre <= halfCalmZoneWidth)
         {
-            // Still inside the green zone
+            // Still inside green zone
             currentTank.HealFish(goodHealAmount);
-            resultText.text = "GOOD APPLICATION!";
+            resultText.text = "GOOD!";
         }
         else
         {
-            // Outside the green zone
+            // Outside green zone
             currentTank.HealFish(missHealAmount);
-            resultText.text = "THE FISH WRIGGLED!";
+            resultText.text = "WRIGGLED!";
         }
 
-        // Update the fish info panel health bar
+        // Update the fish panel health bar
         FishInfoUI.Instance.RefreshUI();
 
-        // Close the mini game after a short delay
+        // Close after short delay
         StartCoroutine(CloseAfterDelay());
+    }
+
+    private void ShowOintmentEffect()
+    {
+        // If no ointment effect was assigned, stop here
+        if (ointmentEffect == null) return;
+
+        // Show the ointment blob
+        ointmentEffect.SetActive(true);
+
+        // Reset size before the absorb effect starts
+        ointmentEffect.transform.localScale = Vector3.one;
+
+        // Start the absorb effect
+        StartCoroutine(OintmentAbsorbEffect());
+    }
+
+    private IEnumerator OintmentAbsorbEffect()
+    {
+        // Try to get the Image component from the ointment blob
+        Image ointmentImage = ointmentEffect.GetComponent<Image>();
+
+        // If there is no Image component, stop here
+        if (ointmentImage == null) yield break;
+
+        // Remember the original colour
+        Color startColor = ointmentImage.color;
+
+        // How long the ointment takes to absorb
+        float absorbTime = 1.5f;
+
+        // Timer starts at 0
+        float timer = 0f;
+
+        while (timer < absorbTime)
+        {
+            // Increase timer every frame
+            timer += Time.deltaTime;
+
+            // This gives us a value from 0 to 1
+            float progress = timer / absorbTime;
+
+            // Slowly shrink the ointment blob
+            float scale = Mathf.Lerp(1f, 0.2f, progress);
+            ointmentEffect.transform.localScale = Vector3.one * scale;
+
+            // Slowly fade the ointment blob out
+            float alpha = Mathf.Lerp(1f, 0f, progress);
+            ointmentImage.color = new Color(startColor.r, startColor.g, startColor.b, alpha);
+
+            yield return null;
+        }
+
+        // Hide the ointment blob after it has absorbed
+        ointmentEffect.SetActive(false);
+
+        // Reset it ready for next time
+        ointmentEffect.transform.localScale = Vector3.one;
+        ointmentImage.color = startColor;
     }
 
     private IEnumerator CloseAfterDelay()
     {
-        // Let the player see the result text
+        // Let player see the result
         yield return new WaitForSeconds(0.8f);
 
-        // Hide the mini game panel
+        // Hide panel
         panel.SetActive(false);
 
-        // Forget the tank
+        // Hide ointment effect ready for next time
+        if (ointmentEffect != null)
+        {
+            ointmentEffect.SetActive(false);
+        }
+
+        // Forget the current tank
         currentTank = null;
     }
 }

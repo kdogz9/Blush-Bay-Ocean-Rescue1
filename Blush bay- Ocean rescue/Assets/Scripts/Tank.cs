@@ -52,10 +52,10 @@ public class Tank : MonoBehaviour
             // Get the SpriteRenderer from the fish object
             SpriteRenderer spriteRenderer = fishSprite.GetComponent<SpriteRenderer>();
 
-            // If it has no SpriteRenderer, return nothing
+            // If there is no SpriteRenderer, return nothing
             if (spriteRenderer == null) return null;
 
-            // Return the actual fish sprite image
+            // Return the sprite being used by this fish
             return spriteRenderer.sprite;
         }
     }
