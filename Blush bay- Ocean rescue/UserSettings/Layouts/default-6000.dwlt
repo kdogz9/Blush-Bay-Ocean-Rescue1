@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Game
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -594,7 +594,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Assets/Character
+    - Assets/Assets/Flooring
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -604,28 +604,28 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Assets/Character
+  - Assets/Assets/Flooring
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\GitHub\Blush-Bay-Ocean-Rescue1\Blush bay- Ocean rescue
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
+    scrollPos: {x: 0, y: 60}
     m_SelectedIDs:
-    - m_Data: 52222
+    - m_Data: 52216
     m_LastClickedID:
-      m_Data: 52222
+      m_Data: 52216
     m_ExpandedIDs:
     - m_Data: 0
+    - m_Data: 52108
+    - m_Data: 52110
+    - m_Data: 52112
+    - m_Data: 52114
+    - m_Data: 52116
     - m_Data: 52118
     - m_Data: 52120
     - m_Data: 52122
-    - m_Data: 52124
-    - m_Data: 52126
-    - m_Data: 52128
-    - m_Data: 52230
-    - m_Data: 52234
     - m_Data: 1000000000
     - m_Data: 2147483647
     m_RenameOverlay:
@@ -661,14 +661,14 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
+    - m_Data: 52108
+    - m_Data: 52110
+    - m_Data: 52112
+    - m_Data: 52114
+    - m_Data: 52116
     - m_Data: 52118
     - m_Data: 52120
     - m_Data: 52122
-    - m_Data: 52124
-    - m_Data: 52126
-    - m_Data: 52128
-    - m_Data: 52130
-    - m_Data: 52132
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -697,13 +697,14 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: -35240
+    - m_Data: 51624
     m_LastClickedEntityId:
-      m_Data: -35240
-    m_HadKeyboardFocusLastEvent: 0
+      m_Data: 51624
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_Data: 52722
     - m_Data: 54506
+    - m_Data: 51842
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -828,30 +829,13 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs:
-      - m_Data: -35240
+      - m_Data: 51624
       m_LastClickedID:
-        m_Data: 0
+        m_Data: 51624
       m_ExpandedIDs:
-      - m_Data: -60978
-      - m_Data: -60228
-      - m_Data: -45522
-      - m_Data: -40918
-      - m_Data: -40396
-      - m_Data: -37810
-      - m_Data: -37766
+      - m_Data: -10404
       - m_Data: -1382
-      - m_Data: 51480
-      - m_Data: 51496
-      - m_Data: 51662
-      - m_Data: 51752
-      - m_Data: 51758
-      - m_Data: 57332
-      - m_Data: 57434
-      - m_Data: 57514
-      - m_Data: 57560
-      - m_Data: 57582
-      - m_Data: 57604
-      - m_Data: 57610
+      - m_Data: 51746
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1096,7 +1080,7 @@ MonoBehaviour:
       sizeOverridden: 0
     - dockPosition: 1
       containerId: overlay-container--right
-      displayed: 0
+      displayed: 1
       id: Scene View/Tilemap Focus
       index: 0
       contents: '{"m_Layout":4,"m_Collapsed":false,"m_Folded":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
@@ -1124,7 +1108,7 @@ MonoBehaviour:
       sizeOverridden: 0
     - dockPosition: 1
       containerId: overlay-container--right
-      displayed: 1
+      displayed: 0
       id: Scene View/Open Tile Palette
       index: 2
       contents: '{"m_Layout":4,"m_Collapsed":false,"m_Folded":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
@@ -1375,9 +1359,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 0.12824577, y: -1.2365878, z: -0.034592}
+    m_Target: {x: -2.948517, y: -0.87031966, z: -0.054557048}
     speed: 2
-    m_Value: {x: 0.12824577, y: -1.2365878, z: -0.034592}
+    m_Value: {x: -2.948517, y: -0.87031966, z: -0.054557048}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1415,7 +1399,7 @@ MonoBehaviour:
       m_Fade:
         m_Target: 0
         speed: 2
-        m_Value: 0
+        m_Value: 1
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_OffsetAlongAxis: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -1428,9 +1412,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.581696
+    m_Target: 6.5782027
     speed: 2
-    m_Value: 4.581696
+    m_Value: 6.5782027
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1547,15 +1531,15 @@ MonoBehaviour:
       width: 1100
       height: 506
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 423.39423, y: 263.63416}
+    m_Translation: {x: 558.8029, y: 260.5541}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -423.39423
-      y: -263.63416
+      x: -558.8029
+      y: -260.5541
       width: 1100
       height: 506
     m_MinimalGUI: 1
