@@ -1,11 +1,11 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
 Built from '6000.4/staging' branch; Version is '6000.4.10f1 (feeafc12a938) revision 16706300'; Using compiler version '194234433'; Build Type 'Release'
 OS: 'Windows 11  (10.0.26200) Professional' Language: 'en' Physical Memory: 31860 MB
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-keish" at "2026-06-30T20:33:27.2890382Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-keish" at "2026-07-01T11:32:32.4592698Z"
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
 System  architecture: x64
 Process architecture: x64
-Date: 2026-06-30T20:33:27Z
+Date: 2026-07-01T11:32:32Z
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\6000.4.10f1\Editor\Unity.exe
@@ -19,7 +19,7 @@ C:/GitHub/Blush-Bay-Ocean-Rescue1/Blush bay- Ocean rescue
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52489
+58420
 -licensingIpc
 LicenseClient-keish
 -force-d3d12
@@ -68,12 +68,12 @@ C:/GitHub/Blush-Bay-Ocean-Rescue1/Blush bay- Ocean rescue
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [9048]  Target information:
+Player connection [16704]  Target information:
 
-Player connection [9048]  * "[IP] 192.168.1.69 [Port] 0 [Flags] 2 [Guid] 2844370306 [EditorId] 2844370306 [Version] 1048832 [Id] WindowsEditor(7,K-Baddie) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [16704]  * "[IP] 192.168.1.69 [Port] 0 [Flags] 2 [Guid] 1584220241 [EditorId] 1584220241 [Version] 1048832 [Id] WindowsEditor(7,K-Baddie) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [9048] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [9048] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [16704] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [16704] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 7
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -85,7 +85,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 3.75 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 2.53 ms, found 5 plugins.
 Initialize engine version: 6000.4.10f1 (feeafc12a938)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.4.10f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/GitHub/Blush-Bay-Ocean-Rescue1/Blush bay- Ocean rescue/Assets
@@ -103,55 +103,55 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.4.10f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.4.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.4.10f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56928
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56104
 CodeReloadManager initialized
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.10f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002073 seconds.
+Registered in 0.001389 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Package Manager log level set to [2]
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
 [Licensing::Client] Error: HandshakeResponse reported an error:
 	ResponseCode: 505
 	ResponseStatus: Unsupported protocol version '1.18.1'.
 [Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-keish"
 [Licensing::IpcConnector] LicenseClient-keish channel disconnected successfully.
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-keish-6000.4.10" at "2026-06-30T20:33:28.6076962Z"
-[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 13652, path: "C:/Program Files/Unity/Hub/Editor/6000.4.10f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-keish-6000.4.10" at "2026-07-01T11:32:33.7456936Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 43164, path: "C:/Program Files/Unity/Hub/Editor/6000.4.10f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
 [Licensing::Module] LicensingClient has failed validation; ignoring
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.18.1+9fbee8e
-  Session Id:              8bb48e2af1174fdda30b82d53927453e
-  Correlation Id:          f6088bb3f1c0f73d470b1d0a3e63520f
-  External correlation Id: 5451905367534965567
+  Session Id:              569b4fdeabb2432886d2f9e865752acd
+  Correlation Id:          0b52c3f3911128b58fdfe21a8ff5e725
+  External correlation Id: 5431482080094500321
   Machine Id:              /RzPr2gAIPSB4NcypRRRBkxSfUM=
 [Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-keish-6000.4.10" (connect: 0.00s, validation: 0.00s, handshake: 0.01s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-keish-6000.4.10-notifications" at "2026-06-30T20:33:28.6167882Z"
-[Licensing::Module] Licensing Background thread has ended after 1.33s
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-keish-6000.4.10-notifications" at "2026-07-01T11:32:33.7543339Z"
+[Licensing::Module] Licensing Background thread has ended after 1.30s
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
 - Finished resetting the current domain, in  0.289 seconds
-Domain Reload Profiling: 637ms
-	BeginReloadAssembly (88ms)
-	RebuildCommonClasses (28ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (50ms)
-	LoadAllAssembliesAndSetupDomain (170ms)
-		LoadAssemblies (86ms)
-		AnalyzeDomain (163ms)
-			TypeCache.Refresh (162ms)
-				TypeCache.ScanAssembly (149ms)
+Domain Reload Profiling: 645ms
+	BeginReloadAssembly (101ms)
+	RebuildCommonClasses (32ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (47ms)
+	LoadAllAssembliesAndSetupDomain (167ms)
+		LoadAssemblies (99ms)
+		AnalyzeDomain (160ms)
+			TypeCache.Refresh (158ms)
+				TypeCache.ScanAssembly (146ms)
 	FinalizeReload (290ms)
 		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (42ms)
-			BeforeProcessingInitializeOnLoad (59ms)
-			ProcessInitializeOnLoadAttributes (78ms)
-			ProcessInitializeOnLoadMethodAttributes (59ms)
+			InitializePlatformSupportModulesInManaged (40ms)
+			BeforeProcessingInitializeOnLoad (63ms)
+			ProcessInitializeOnLoadAttributes (85ms)
+			ProcessInitializeOnLoadMethodAttributes (55ms)
 ========================================================================
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
@@ -165,6 +165,8 @@ Begin MonoManager ReloadAssembly
 Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
 Assembly Assembly-CSharp-Editor.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor.dll not valid. Loading of assembly skipped.
 Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
+Assembly Cinemachine.Editor.Tests.dll at Library/ScriptAssemblies/Cinemachine.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Cinemachine.Runtime.Tests.dll at Library/ScriptAssemblies/Cinemachine.Runtime.Tests.dll not valid. Loading of assembly skipped.
 Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
 Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
 Assembly Unity.2D.Animation.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Animation.EditorTests.dll not valid. Loading of assembly skipped.
@@ -209,72 +211,72 @@ Native extension for WebGL target not found
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.526 seconds
-Domain Reload Profiling: 1125ms
-	BeginReloadAssembly (137ms)
+- Finished resetting the current domain, in  0.507 seconds
+Domain Reload Profiling: 1079ms
+	BeginReloadAssembly (123ms)
 		DisableScriptedObjects (3ms)
-		CreateAndSetChildDomain (30ms)
-	RebuildCommonClasses (23ms)
+		CreateAndSetChildDomain (31ms)
+	RebuildCommonClasses (29ms)
 	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (48ms)
-	LoadAllAssembliesAndSetupDomain (384ms)
-		LoadAssemblies (250ms)
-		AnalyzeDomain (195ms)
-			TypeCache.Refresh (128ms)
-				TypeCache.ScanAssembly (115ms)
-			BuildScriptInfoCaches (59ms)
-			ResolveRequiredComponents (6ms)
-	FinalizeReload (527ms)
+	initialDomainReloadingComplete (47ms)
+	LoadAllAssembliesAndSetupDomain (365ms)
+		LoadAssemblies (231ms)
+		AnalyzeDomain (193ms)
+			TypeCache.Refresh (124ms)
+				TypeCache.ScanAssembly (113ms)
+			BuildScriptInfoCaches (58ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (507ms)
 		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (100ms)
-			ProcessInitializeOnLoadAttributes (221ms)
-			ProcessInitializeOnLoadMethodAttributes (85ms)
+			BeforeProcessingInitializeOnLoad (90ms)
+			ProcessInitializeOnLoadAttributes (216ms)
+			ProcessInitializeOnLoadMethodAttributes (89ms)
 			AfterProcessingInitializeOnLoad (4ms)
-		AwakeInstancesAfterBackupRestoration (5ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
-Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7271 unused Assets / (5.1 MB). Loaded Objects now: 8112.
-Memory consumption went from 167.6 MB to 162.5 MB.
-Total: 6.350400 ms (FindLiveObjects: 0.677400 ms CreateObjectMapping: 0.285900 ms MarkObjects: 3.496000 ms  DeleteObjects: 1.889400 ms)
+Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7434 unused Assets / (5.8 MB). Loaded Objects now: 8275.
+Memory consumption went from 170.3 MB to 164.5 MB.
+Total: 7.027300 ms (FindLiveObjects: 0.751300 ms CreateObjectMapping: 0.213500 ms MarkObjects: 3.987300 ms  DeleteObjects: 2.073500 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 538044.497680 seconds.
-  path: Assets/Assets/Flooring/Floor Tile Sprite Sheet (64x64) .PNG_0.asset
-  importAddress: Guid(1786cfa61252ca941a63e4cc8274430e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Assets/Flooring/Floor Tile Sprite Sheet (64x64) .PNG_0.asset using Guid(1786cfa61252ca941a63e4cc8274430e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '651cc444af24aa00ff64dc77a8abe772') in 0.0649648 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7ef1b2d4b000ef2607ccec4d04ed11f9 DependenciesID=81b170845110401fb21ada6f370fe004 StaticDependenciesID=4b41ccd5c0dc7aac8f691567344e4e09 
+  Time since last request: 591990.810785 seconds.
+  path: Assets/Assets/Flooring/Floor Tile Sprite Sheet (64x64) wooden_4.asset
+  importAddress: Guid(dc8be12aaa4d4474abe544f4df083873) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Assets/Flooring/Floor Tile Sprite Sheet (64x64) wooden_4.asset using Guid(dc8be12aaa4d4474abe544f4df083873) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'd3c4829ea5d94563595c6a94052c4fa5') in 0.0578214 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9f125e124f7a35a9f6e84aa3eda12e9c DependenciesID=b5f53600a4d04f2e18dbd5b6b2766a4a StaticDependenciesID=f70d948806c7960b601774407ba5dbca 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000051 seconds.
-  path: Assets/Assets/Flooring/Floor Tile Sprite Sheet (64x64) .PNG.PNG
-  importAddress: Guid(da65e98aff716d6469834465bb0df4c2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Assets/Flooring/Floor Tile Sprite Sheet (64x64) .PNG.PNG using Guid(da65e98aff716d6469834465bb0df4c2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '6e211b3c2ca3eca24b26ab44c556efc8') in 0.0314011 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=987664202884c4484c24c493d3183cb6 DependenciesID=d88b80e4fa242abff6484e2e887b12c8 StaticDependenciesID=bb6d33c3044cb5cc5c9d9819a0ae658c 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Scripts/TankSystem/OintmentMinigame.cs
-  importAddress: Guid(eaf309ac2ae62b7469d292962e339a53) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Scripts/TankSystem/OintmentMinigame.cs using Guid(eaf309ac2ae62b7469d292962e339a53) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'a6266bce118cf6a4dbeb59e8a4dce05e') in 0.0032142 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=784de9704e6e2f4f195f0f1e80db75f0 DependenciesID=8d9cdfada277dc533428d8c22b63ff57 StaticDependenciesID=affc62675162da028c71b7ba9ea313f3 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000018 seconds.
-  path: Assets/Assets/Flooring/Floor Tile Sprite Sheet (64x64) .PNG_2.asset
-  importAddress: Guid(b5ab627ee6831374f8f66ef7dc04bd95) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Assets/Flooring/Floor Tile Sprite Sheet (64x64) .PNG_2.asset using Guid(b5ab627ee6831374f8f66ef7dc04bd95) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'da772f0cb8ffbc256fb106e78b993da4') in 0.0044152 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2538e66568f43c47ecb6ab48bf181893 DependenciesID=e736e6db473395bf0351de8c52018c2f StaticDependenciesID=b08a8d8202b6a110fed3cb10a68a30b9 
+  path: Assets/Assets/Flooring/Floor Tile Sprite Sheet (64x64) wooden_6.asset
+  importAddress: Guid(319a45f77d356d3498b5cd673229e832) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Assets/Flooring/Floor Tile Sprite Sheet (64x64) wooden_6.asset using Guid(319a45f77d356d3498b5cd673229e832) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f1879062c1a473186c1e279190f5ffba') in 0.0045135 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=245555901ff7db1a31cb0deed8577d1f DependenciesID=926b199289777eca7ed8d3f8011815ea StaticDependenciesID=edb717516cc49e2b40db2aa8080e0c64 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Assets/Flooring/Floor tile paltte.prefab
-  importAddress: Guid(2d76dbdc0b8345847bcc2febd22d1003) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Assets/Flooring/Floor tile paltte.prefab using Guid(2d76dbdc0b8345847bcc2febd22d1003) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '3965ac0cb8fbaea9748a863344944b61') in 0.0097681 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a9ed8025edc1f0e400804a84d9797da9 DependenciesID=205bab304bb474aff3b8f74193fc4aa6 StaticDependenciesID=1891ae93ac19d94361a988dda84e3bb1 
+  Time since last request: 0.000014 seconds.
+  path: Assets/Assets/Flooring/Floor Tile Sprite Sheet (64x64) wooden.PNG
+  importAddress: Guid(9b22f368b92a6d54dbc5c796e306896a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Assets/Flooring/Floor Tile Sprite Sheet (64x64) wooden.PNG using Guid(9b22f368b92a6d54dbc5c796e306896a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'eaec97ffa5707128082b883360bfdfe5') in 0.0358495 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0c5a6c0b3dd82cfa367acc68c2b69bbd DependenciesID=59146c9d66e186bbb130cb0063f641ef StaticDependenciesID=23f7e282b3c9ca32785557f01a767753 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Assets/Flooring/Floor Tile Sprite Sheet (64x64) wooden_3.asset
+  importAddress: Guid(52e9eaaee873fd5469a01a12d3534e6a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Assets/Flooring/Floor Tile Sprite Sheet (64x64) wooden_3.asset using Guid(52e9eaaee873fd5469a01a12d3534e6a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '137546d11d1ecf34eda140d202ea0ee9') in 0.0034744 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5bc44a0990f628caa9ca6a1bf77a9db2 DependenciesID=456ca428341984754ee20b192da90ac1 StaticDependenciesID=0173e3fddb0c1cacf7244df1dd61f020 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Assets/Walls/Wall tile palette.prefab
+  importAddress: Guid(6bb0dbcb95cac174bb1dfcde045a88a0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Assets/Walls/Wall tile palette.prefab using Guid(6bb0dbcb95cac174bb1dfcde045a88a0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e167d9b2c7b13bb39544c1d902f1958a') in 0.0087304 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9428878229c8c97f12ef9a8ecae72acf DependenciesID=c2e5a7c1cd4968628d0f32526c045ffe StaticDependenciesID=9145c53af8568ad1046582b481b20a56 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout

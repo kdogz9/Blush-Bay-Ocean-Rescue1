@@ -271,8 +271,8 @@ MonoBehaviour:
     y: 0
     width: 1102
     height: 553
-  m_MinSize: {x: 202, y: 226}
-  m_MaxSize: {x: 4002, y: 4026}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 16}
@@ -594,7 +594,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/RescueSystem
+    - Assets/Scenes
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -604,29 +604,29 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/RescueSystem
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\GitHub\Blush-Bay-Ocean-Rescue1\Blush bay- Ocean rescue
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 300}
+    scrollPos: {x: 0, y: 198}
     m_SelectedIDs:
-    - m_Data: 60612
+    - m_Data: 53080
     m_LastClickedID:
-      m_Data: 60612
+      m_Data: 53080
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 52656
-    - m_Data: 52658
-    - m_Data: 52660
-    - m_Data: 52662
-    - m_Data: 52664
-    - m_Data: 52666
-    - m_Data: 52668
-    - m_Data: 52670
-    - m_Data: 53000
+    - m_Data: 52952
+    - m_Data: 52954
+    - m_Data: 52956
+    - m_Data: 52958
+    - m_Data: 52960
+    - m_Data: 52962
+    - m_Data: 52964
+    - m_Data: 52966
+    - m_Data: 53082
     - m_Data: 1000000000
     - m_Data: 2147483647
     m_RenameOverlay:
@@ -662,14 +662,14 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 52656
-    - m_Data: 52658
-    - m_Data: 52660
-    - m_Data: 52662
-    - m_Data: 52664
-    - m_Data: 52666
-    - m_Data: 52668
-    - m_Data: 52670
+    - m_Data: 52952
+    - m_Data: 52954
+    - m_Data: 52956
+    - m_Data: 52958
+    - m_Data: 52960
+    - m_Data: 52962
+    - m_Data: 52964
+    - m_Data: 52966
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -697,10 +697,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs:
-    - m_Data: 60714
+    m_SelectedInstanceIDs: []
     m_LastClickedEntityId:
-      m_Data: 60714
+      m_Data: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_Data: 52722
@@ -829,15 +828,24 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs:
-      - m_Data: 60714
+      m_SelectedIDs: []
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -26952
-      - m_Data: -26794
+      - m_Data: -13280
+      - m_Data: -6582
+      - m_Data: -6128
+      - m_Data: -5962
+      - m_Data: -2002
       - m_Data: -1410
-      - m_Data: 52416
+      - m_Data: 53198
+      - m_Data: 53780
+      - m_Data: 53870
+      - m_Data: 53878
+      - m_Data: 54002
+      - m_Data: 54102
+      - m_Data: 58596
+      - m_Data: 58622
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1361,9 +1369,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 1127.7103, y: 549.28815, z: -6.2214913}
+    m_Target: {x: 1038.782, y: 514.53876, z: -1.2927672}
     speed: 2
-    m_Value: {x: 1127.7103, y: 549.28815, z: -6.2214913}
+    m_Value: {x: 1038.782, y: 514.53876, z: -1.2927672}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1414,9 +1422,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 703.5437
+    m_Target: 210.67168
     speed: 2
-    m_Value: 703.5437
+    m_Value: 210.67168
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1533,15 +1541,15 @@ MonoBehaviour:
       width: 1100
       height: 506
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 416.91537, y: 246.64407}
+    m_Translation: {x: 418.68094, y: 278.30707}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -416.91537
-      y: -246.64407
+      x: -418.68094
+      y: -278.30707
       width: 1100
       height: 506
     m_MinimalGUI: 1
