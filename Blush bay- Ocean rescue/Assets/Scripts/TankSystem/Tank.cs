@@ -3,84 +3,115 @@ using UnityEngine;
 public class Tank : MonoBehaviour
 {
     [Header("Fish Info")]
-    [SerializeField] private string fishName = "Bubbles";
+    [SerializeField] private string fishName = "BUBBLES";
+    [SerializeField] private string illnessName = "SCRATCHED FIN";
 
-    [SerializeField] private int health = 30;
+    [SerializeField] private int health = 0;
     [SerializeField] private int maxHealth = 100;
 
-    [SerializeField] private bool hasFish = true;
+    [SerializeField] private bool hasFish = false;
 
     [Header("Visuals")]
     [SerializeField] private GameObject fishSprite;
 
-    // These let other scripts read the fish info
+    // Other scripts can read these values
     public string FishName => fishName;
+    public string IllnessName => illnessName;
     public int Health => health;
     public int MaxHealth => maxHealth;
     public bool HasFish => hasFish;
 
-    // Fish can only be released when it exists and has full health
+    // Fish is ready to release only if there is a fish and health is full
     public bool ReadyToRelease => hasFish && health >= maxHealth;
 
-    private void Start()
-    {
-        // Make sure the fish sprite is shown or hidden correctly when the game starts
-        UpdateFishSprite();
-    }
-
-    public void HealFish(int healAmount)
-    {
-        // If there is no fish in the tank, stop here
-        if (!hasFish) return;
-
-        // Add healing to the fish
-        health += healAmount;
-
-        // Stop the health going above the max health
-        health = Mathf.Clamp(health, 0, maxHealth);
-    }
-    
-    
-
+    // This lets UI and mini games get the current fish sprite
     public Sprite FishSpriteImage
     {
         get
         {
-            // If no fish sprite object has been assigned, return nothing
             if (fishSprite == null) return null;
 
-            // Get the SpriteRenderer from the fish object
             SpriteRenderer spriteRenderer = fishSprite.GetComponent<SpriteRenderer>();
 
-            // If there is no SpriteRenderer, return nothing
             if (spriteRenderer == null) return null;
 
-            // Return the sprite being used by this fish
             return spriteRenderer.sprite;
         }
     }
-    
-    public void ReleaseFish()
+
+    private void Start()
     {
-        // Only release the fish if it is fully healed
-        if (!ReadyToRelease) return;
+        // Makes sure the fish sprite matches whether the tank has a fish
+        UpdateFishSprite();
+    }
 
-        // The tank is now empty
-        hasFish = false;
+    public void AddFish(string newFishName, Sprite newFishSprite, int startingHealth, int newMaxHealth, string newIllnessName)
+    {
+        // Set new fish data
+        fishName = newFishName;
+        illnessName = newIllnessName;
+        maxHealth = newMaxHealth;
 
-        // Hide the fish sprite
+        // Clamp keeps health between 0 and maxHealth
+        health = Mathf.Clamp(startingHealth, 0, maxHealth);
+
+        // Tank now has a fish
+        hasFish = true;
+
+        // Change the visible fish sprite
+        if (fishSprite != null)
+        {
+            fishSprite.SetActive(true);
+
+            SpriteRenderer spriteRenderer = fishSprite.GetComponent<SpriteRenderer>();
+
+            if (spriteRenderer != null)
+            {
+                spriteRenderer.sprite = newFishSprite;
+            }
+        }
+
         UpdateFishSprite();
 
+        Debug.Log("Fish added to tank: " + fishName);
+    }
+
+    public void HealFish(int healAmount)
+    {
+        // If tank is empty, do not heal anything
+        if (!hasFish) return;
+
+        // Add health
+        health += healAmount;
+
+        // Stop health going above max
+        health = Mathf.Clamp(health, 0, maxHealth);
+
+        Debug.Log(fishName + " healed to " + health + " / " + maxHealth);
+    }
+
+    public void ReleaseFish()
+    {
+        // Only release if there is a fish and it is fully healed
+        if (!ReadyToRelease) return;
+
         Debug.Log(fishName + " was released into the ocean!");
+
+        // Empty the tank
+        hasFish = false;
+        health = 0;
+        fishName = "EMPTY TANK";
+        illnessName = "";
+
+        UpdateFishSprite();
     }
 
     private void UpdateFishSprite()
     {
-        // If no fish sprite has been added in the Inspector, stop here
+        // If no fish sprite object is assigned, stop here
         if (fishSprite == null) return;
 
-        // Show the fish if the tank has a fish
-        // Hide the fish if the tank is empty
+        // Show fish only if the tank has a fish
         fishSprite.SetActive(hasFish);
     }
 }

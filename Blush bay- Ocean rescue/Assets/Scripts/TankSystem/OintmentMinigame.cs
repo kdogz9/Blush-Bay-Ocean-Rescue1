@@ -71,46 +71,39 @@ public class OintmentMiniGame : MonoBehaviour
 
     public void StartMiniGame(Tank tank)
     {
-        // If no tank was given, stop here
+        // Safety checks
         if (tank == null) return;
 
-        // If tank has no fish, stop here
+        // Do not start if tank is empty
         if (!tank.HasFish) return;
 
-        // If fish is already healed, stop here
+        // Do not start if fish is already ready to release
         if (tank.ReadyToRelease) return;
 
-        // Remember which tank we are treating
         currentTank = tank;
 
-        // Show the panel
         panel.SetActive(true);
 
-        // Set title and clear old result
         titleText.text = "APPLY OINTMENT";
         resultText.text = "";
 
-        // Show the fish sprite from the tank on the mini game UI
+        // Show the current fish on the mini game panel
         if (miniGameFishImage != null)
         {
             miniGameFishImage.sprite = currentTank.FishSpriteImage;
+            miniGameFishImage.preserveAspect = true;
             miniGameFishImage.gameObject.SetActive(currentTank.FishSpriteImage != null);
         }
 
-        // Hide ointment mark until player presses SPACE
         if (ointmentEffect != null)
         {
             ointmentEffect.SetActive(false);
         }
 
-        // Put marker at left side of the bar
         float leftSide = -timingBar.rect.width / 2f;
         marker.anchoredPosition = new Vector2(leftSide, marker.anchoredPosition.y);
 
-        // Start moving right
         moveDirection = 1;
-
-        // Start the mini game
         gameRunning = true;
     }
 

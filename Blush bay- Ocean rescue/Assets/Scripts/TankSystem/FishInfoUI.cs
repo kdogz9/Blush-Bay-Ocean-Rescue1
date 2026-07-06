@@ -4,14 +4,12 @@ using TMPro;
 
 public class FishInfoUI : MonoBehaviour
 {
-    // Lets other scripts open this UI
     public static FishInfoUI Instance;
 
     [Header("UI Objects")]
     [SerializeField] private GameObject panel;
 
     [SerializeField] private TMP_Text fishNameText;
-
     [SerializeField] private Image fishUIImage;
 
     [SerializeField] private Slider healthSlider;
@@ -20,55 +18,48 @@ public class FishInfoUI : MonoBehaviour
     [SerializeField] private Button releaseButton;
     [SerializeField] private Button closeButton;
 
-    // The tank we are currently looking at
     private Tank currentTank;
 
     private void Awake()
     {
         Instance = this;
 
-        // Make the buttons run code when clicked
         treatButton.onClick.AddListener(TreatFish);
         releaseButton.onClick.AddListener(ReleaseFish);
         closeButton.onClick.AddListener(ClosePanel);
 
-        // Hide panel when game starts
         panel.SetActive(false);
     }
 
     public void OpenPanel(Tank tank)
     {
-        // Remember which tank we opened
         currentTank = tank;
-
-        // Show the panel
         panel.SetActive(true);
-
-        // Refresh UI
         UpdateUI();
     }
-    
-   
-    
-   
+
+    public void RefreshUI()
+    {
+        UpdateUI();
+    }
 
     private void UpdateUI()
     {
-        // Safety check
         if (currentTank == null) return;
 
-        // If the tank is empty
+        // EMPTY TANK UI
         if (!currentTank.HasFish)
         {
-            fishNameText.text = "EMPTY";
+            fishNameText.text = "EMPTY TANK";
 
-            // Hide fish image because there is no fish
-            fishUIImage.gameObject.SetActive(false);
+            if (fishUIImage != null)
+            {
+                fishUIImage.gameObject.SetActive(false);
+                fishUIImage.sprite = null;
+            }
 
-            // Hide health bar because there is no health to show
             healthSlider.gameObject.SetActive(false);
 
-            // Keep buttons visible, but grey out Treat and Release
             treatButton.gameObject.SetActive(true);
             releaseButton.gameObject.SetActive(true);
             closeButton.gameObject.SetActive(true);
@@ -80,58 +71,50 @@ public class FishInfoUI : MonoBehaviour
             return;
         }
 
-        // If the tank has a fish
+        // FISH IN TANK UI
         fishNameText.text = currentTank.FishName;
 
-        // Show fish image
-        fishUIImage.gameObject.SetActive(true);
+        if (fishUIImage != null)
+        {
+            fishUIImage.sprite = currentTank.FishSpriteImage;
+            fishUIImage.preserveAspect = true;
+            fishUIImage.gameObject.SetActive(currentTank.FishSpriteImage != null);
+        }
 
-        // Put the tank fish sprite onto the UI image
-        fishUIImage.sprite = currentTank.FishSpriteImage;
-
-        // Show health bar and buttons
         healthSlider.gameObject.SetActive(true);
+        healthSlider.maxValue = currentTank.MaxHealth;
+        healthSlider.value = currentTank.Health;
+
         treatButton.gameObject.SetActive(true);
         releaseButton.gameObject.SetActive(true);
         closeButton.gameObject.SetActive(true);
 
-        // Update health bar
-        healthSlider.maxValue = currentTank.MaxHealth;
-        healthSlider.value = currentTank.Health;
-
-        // Treat only works if the fish is not fully healed
+        // Treat is disabled when fish is fully healed
         treatButton.interactable = !currentTank.ReadyToRelease;
 
-// Release only works when the fish is fully healed
+        // Release only works when fish is fully healed
         releaseButton.interactable = currentTank.ReadyToRelease;
 
-        // Close always works
         closeButton.interactable = true;
     }
 
     private void TreatFish()
     {
-        // If no tank is selected, stop here
         if (currentTank == null) return;
 
-        // If the tank is empty, stop here
+        // Do not treat empty tank
         if (!currentTank.HasFish) return;
 
-        // If the fish is already fully healed, do not treat again
+        // Do not treat fully healed fish
         if (currentTank.ReadyToRelease) return;
 
-        // Start the ointment mini game
         OintmentMiniGame.Instance.StartMiniGame(currentTank);
-    }
-    
-    public void RefreshUI()
-    {
-        // This lets the mini game update the fish panel
-        UpdateUI();
     }
 
     private void ReleaseFish()
     {
+        if (currentTank == null) return;
+
         currentTank.ReleaseFish();
 
         UpdateUI();
@@ -140,9 +123,6 @@ public class FishInfoUI : MonoBehaviour
     private void ClosePanel()
     {
         panel.SetActive(false);
-
         currentTank = null;
     }
-    
-    
 }
