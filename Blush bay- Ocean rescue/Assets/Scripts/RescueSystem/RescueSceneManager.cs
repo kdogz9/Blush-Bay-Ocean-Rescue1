@@ -8,7 +8,7 @@ public class RescueSceneManager : MonoBehaviour
     public static RescueSceneManager Instance;
 
     [Header("Scene Names")]
-    [SerializeField] private string aquariumSceneName = "AquariumScene";
+    [SerializeField] private string aquariumSceneName = "SampleScene";
 
     [Header("Rescue Panel UI")]
     [SerializeField] private GameObject rescuedFishPanel;
