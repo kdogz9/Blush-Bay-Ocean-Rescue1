@@ -38,13 +38,13 @@ public class DonationBox : MonoBehaviour
     public void ReceiveDonation(int amount)
     {
         // Add the money to the donation total
-        if (DonationManager.Instance != null)
+        if (CurrencyManager.Instance != null)
         {
-            DonationManager.Instance.AddDonation(amount);
+            CurrencyManager.Instance.AddMoney(amount);
         }
         else
         {
-            Debug.LogWarning("No DonationManager found in the scene.");
+            Debug.LogWarning("No CurrencyManager found in the scene.");
         }
 
         // Show the shell popup effect
