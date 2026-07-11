@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: 273237d12c9bbc34e83fd7beb8ca9f0e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6563402973264347191
+    second: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_0
+  - first:
+      213: 5199671899274395826
+    second: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_1
+  - first:
+      213: 3289519989055966455
+    second: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_2
+  - first:
+      213: -6781057301373706384
+    second: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_3
+  - first:
+      213: -6425007323846011133
+    second: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_4
+  - first:
+      213: -5759194011646958246
+    second: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_5
+  - first:
+      213: -7060591571182353969
+    second: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_6
+  - first:
+      213: 3021118702396135803
+    second: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_7
+  - first:
+      213: -8812183527191225120
+    second: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_8
+  - first:
+      213: 5684576700111678506
+    second: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_9
+  - first:
+      213: 4823611086783552058
+    second: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_10
+  - first:
+      213: -1757618831910032645
+    second: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_11
+  - first:
+      213: 964801935310543434
+    second: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_12
+  - first:
+      213: -6836113750384410350
+    second: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_13
+  - first:
+      213: 6804079527738256917
+    second: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_14
+  - first:
+      213: 1491895771526447261
+    second: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 95
+        width: 13
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7300a23da34e51b50800000000000000
+      internalID: 6563402973264347191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 95
+        width: 13
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b0c4d81b02f82840800000000000000
+      internalID: 5199671899274395826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_2
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 95
+        width: 9
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fc4a3d5009b6ad20800000000000000
+      internalID: 3289519989055966455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_3
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 95
+        width: 9
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07f1d0edf48d4e1a0800000000000000
+      internalID: -6781057301373706384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 63
+        width: 13
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30710ee41e9c5d6a0800000000000000
+      internalID: -6425007323846011133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_5
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 63
+        width: 13
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a55e9375f8b3310b0800000000000000
+      internalID: -5759194011646958246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_6
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 63
+        width: 13
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc10f87ef5db30e90800000000000000
+      internalID: -7060591571182353969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_7
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 63
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b795c98047b2de920800000000000000
+      internalID: 3021118702396135803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_8
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 31
+        width: 9
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ecd73e55c5d4b580800000000000000
+      internalID: -8812183527191225120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_9
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 31
+        width: 11
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2c6e9cf36ca3ee40800000000000000
+      internalID: 5684576700111678506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_10
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 31
+        width: 10
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3a9e521ab8e0f240800000000000000
+      internalID: 4823611086783552058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_11
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 31
+        width: 10
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfa27711cfeab97e0800000000000000
+      internalID: -1757618831910032645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_12
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 0
+        width: 9
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4a5bc89f3aa36d00800000000000000
+      internalID: 964801935310543434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_13
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 0
+        width: 11
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2118c2863ce3121a0800000000000000
+      internalID: -6836113750384410350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_14
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 0
+        width: 10
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51ea85ae742fc6e50800000000000000
+      internalID: 6804079527738256917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_15
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 0
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d90cdbfbc4744b410800000000000000
+      internalID: 1491895771526447261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_0: 6563402973264347191
+      Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_1: 5199671899274395826
+      Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_10: 4823611086783552058
+      Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_11: -1757618831910032645
+      Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_12: 964801935310543434
+      Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_13: -6836113750384410350
+      Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_14: 6804079527738256917
+      Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_15: 1491895771526447261
+      Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_2: 3289519989055966455
+      Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_3: -6781057301373706384
+      Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_4: -6425007323846011133
+      Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_5: -5759194011646958246
+      Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_6: -7060591571182353969
+      Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_7: 3021118702396135803
+      Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_8: -8812183527191225120
+      Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_9: 5684576700111678506
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
