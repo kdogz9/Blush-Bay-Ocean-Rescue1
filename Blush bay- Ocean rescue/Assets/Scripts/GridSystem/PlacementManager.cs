@@ -215,13 +215,13 @@ public class PlacementManager : MonoBehaviour
 
     private Vector3 GetWorldPositionForItem(Vector3Int originCell, PlaceableItem item)
     {
-        // Get the centre of the starting grid cell.
+        // Get the centre of the grid cell the mouse is over.
         Vector3 cellCentre = grid.GetCellCenterWorld(originCell);
 
         // Get the size of each grid cell.
         Vector3 cellSize = grid.cellSize;
 
-        // If an item is bigger than 1x1, this offset keeps it centred.
+        // If an item is bigger than 1x1, this keeps it centred across its footprint.
         float offsetX = (item.SizeInCells.x - 1) * cellSize.x * 0.5f;
         float offsetY = (item.SizeInCells.y - 1) * cellSize.y * 0.5f;
 
@@ -246,8 +246,8 @@ public class PlacementManager : MonoBehaviour
         Vector3 worldPosition = GetWorldPositionForItem(originCell, item);
 
         Vector2 checkSize = new Vector2(
-            item.SizeInCells.x * grid.cellSize.x * 0.9f,
-            item.SizeInCells.y * grid.cellSize.y * 0.9f
+            item.SizeInCells.x * grid.cellSize.x * 0.45f,
+            item.SizeInCells.y * grid.cellSize.y * 0.45f
         );
 
         Collider2D blockedHit = Physics2D.OverlapBox(
