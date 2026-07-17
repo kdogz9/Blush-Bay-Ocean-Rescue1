@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f859d0c7244c7bd4490a87dbfd4f7c27
+guid: bc70754a85f7f4f47b0b1e2b6d409e3a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4414186570170239513
-    second: Section Header UI Panel (280x40) .PNG_0
+      213: 5398223132279918096
+    second: Section Header UI Panel (280x40) .PNG 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Section Header UI Panel (280x40) .PNG_0
+      name: Section Header UI Panel (280x40) .PNG 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 91a0c475c47524d30800000000000000
-      internalID: 4414186570170239513
+      spriteID: 01e47d976575aea40800000000000000
+      internalID: 5398223132279918096
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Section Header UI Panel (280x40) .PNG_0: 4414186570170239513
+      Section Header UI Panel (280x40) .PNG 1_0: 5398223132279918096
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

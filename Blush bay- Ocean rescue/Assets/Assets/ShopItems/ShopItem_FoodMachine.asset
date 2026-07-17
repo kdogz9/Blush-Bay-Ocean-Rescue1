@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ShopItem_FoodMachine
   m_EditorClassIdentifier: Assembly-CSharp::ShopItemData
   itemName: Food Machine
-  category: 0
+  category: 2
   placeablePrefab: {fileID: 6594417589616529880, guid: b58ddaf3c4fb45b4592c9816c300299b, type: 3}

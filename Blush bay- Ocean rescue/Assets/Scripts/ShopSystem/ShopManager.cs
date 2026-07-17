@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -9,46 +10,72 @@ public class ShopManager : MonoBehaviour
     [SerializeField] private Button openShopButton;
     [SerializeField] private Button closeShopButton;
 
+    [Header("Scroll View")]
+    [SerializeField] private Transform contentParent;
+
     [Header("Placement System")]
     [SerializeField] private PlacementManager placementManager;
-
-    [Header("Shop Items")]
-    [SerializeField] private ShopItemButton[] shopItemButtons;
 
     [Header("Starting Category")]
     [SerializeField] private ShopCategory startingCategory = ShopCategory.Tanks;
 
     [Header("Optional Message Text")]
     [SerializeField] private TMP_Text shopMessageText;
+    
+    [Header("Scroll View Controller")]
+    [SerializeField] private ShopScrollController shopScrollController;
+
+    private readonly List<ShopItemButton> shopItems = new List<ShopItemButton>();
+
+    private ShopCategory currentCategory;
 
     private void Start()
     {
-        // Hide shop at the start.
+        currentCategory = startingCategory;
+
+        // Find the shop item cards inside Content.
+        FindShopItems();
+
+        // Hide shop at game start.
         if (shopPanel != null)
         {
             shopPanel.SetActive(false);
         }
 
-        // Connect open shop button.
+        // Connect open button.
         if (openShopButton != null)
         {
             openShopButton.onClick.AddListener(OpenShop);
         }
 
-        // Connect close shop button.
+        // Connect close button.
         if (closeShopButton != null)
         {
             closeShopButton.onClick.AddListener(CloseShop);
         }
 
-        // If we forgot to assign shop items manually,
-        // find them automatically inside the shop panel.
-        if (shopItemButtons == null || shopItemButtons.Length == 0)
+        ShowMessage("");
+    }
+
+    private void FindShopItems()
+    {
+        shopItems.Clear();
+
+        if (contentParent == null)
         {
-            shopItemButtons = GetComponentsInChildren<ShopItemButton>(true);
+            Debug.LogWarning("ShopManager: Content Parent is missing.");
+            return;
         }
 
-        ShowMessage("");
+        // true means it can find inactive shop items too.
+        ShopItemButton[] foundItems = contentParent.GetComponentsInChildren<ShopItemButton>(true);
+
+        foreach (ShopItemButton item in foundItems)
+        {
+            shopItems.Add(item);
+        }
+
+        Debug.Log("ShopManager found " + shopItems.Count + " shop items.");
     }
 
     public void OpenShop()
@@ -58,8 +85,11 @@ public class ShopManager : MonoBehaviour
             shopPanel.SetActive(true);
         }
 
-        // When the shop opens, show the starting category first.
-        ShowCategory(startingCategory);
+        // Refresh the list when opening the shop.
+        FindShopItems();
+
+        // Show the current category.
+        ShowCategory(currentCategory);
 
         ShowMessage("");
     }
@@ -74,18 +104,30 @@ public class ShopManager : MonoBehaviour
 
     public void ShowCategory(ShopCategory categoryToShow)
     {
-        // Loop through every shop item card.
-        foreach (ShopItemButton itemButton in shopItemButtons)
+        currentCategory = categoryToShow;
+
+        int itemsShown = 0;
+
+        foreach (ShopItemButton item in shopItems)
         {
-            if (itemButton == null) continue;
+            if (item == null) continue;
 
-            // Show the item only if it belongs to the selected category.
-            bool shouldShow = itemButton.Category == categoryToShow;
+            bool shouldShow = item.Category == categoryToShow;
 
-            itemButton.SetVisible(shouldShow);
+            item.SetVisible(shouldShow);
+
+            if (shouldShow)
+            {
+                itemsShown++;
+            }
         }
 
-        Debug.Log("Showing shop category: " + categoryToShow);
+        Debug.Log("Showing category: " + categoryToShow + " | Items shown: " + itemsShown);
+        
+        if (shopScrollController != null)
+        {
+            shopScrollController.RefreshScrollView(true);
+        }
     }
 
     public void TryBuyItem(ShopItemData itemData)
@@ -103,7 +145,6 @@ public class ShopManager : MonoBehaviour
             return;
         }
 
-        // Check if the player can afford it.
         if (CurrencyManager.Instance != null)
         {
             if (!CurrencyManager.Instance.CanAfford(itemData.Price))
@@ -113,15 +154,12 @@ public class ShopManager : MonoBehaviour
             }
         }
 
-        // Start grid placement.
-        // Money is still spent later when the player actually places the item.
         if (placementManager != null)
         {
             placementManager.BeginPlacement(itemData.PlaceablePrefab);
 
             ShowMessage("Choose a place!");
 
-            // Close shop so the player can place the furniture.
             CloseShop();
         }
         else

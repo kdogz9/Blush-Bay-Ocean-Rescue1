@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 50539bba5118e6047b961e01b99d3bc1
+guid: 624d70db00f8d284d833540f84668176
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6216604998444266184
-    second: Category Tab UI Panel - Decor (30x80) .PNG_0
+      213: -7341021471022104976
+    second: Category Tab UI Panel - Machines (30x80) .PNG 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Category Tab UI Panel - Decor (30x80) .PNG_0
+      name: Category Tab UI Panel - Machines (30x80) .PNG 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 83dcfced0be2ab9a0800000000000000
-      internalID: -6216604998444266184
+      spriteID: 07e3633ddd37f1a90800000000000000
+      internalID: -7341021471022104976
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Category Tab UI Panel - Decor (30x80) .PNG_0: -6216604998444266184
+      Category Tab UI Panel - Machines (30x80) .PNG 1_0: -7341021471022104976
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

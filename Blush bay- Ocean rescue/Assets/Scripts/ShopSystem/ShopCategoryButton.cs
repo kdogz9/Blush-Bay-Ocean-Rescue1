@@ -14,13 +14,11 @@ public class ShopCategoryButton : MonoBehaviour
 
     private void Start()
     {
-        // If no button was assigned, try to get one on this object.
         if (button == null)
         {
             button = GetComponent<Button>();
         }
 
-        // When this category button is clicked, show that category.
         if (button != null)
         {
             button.onClick.AddListener(ShowCategory);
@@ -31,11 +29,10 @@ public class ShopCategoryButton : MonoBehaviour
     {
         if (shopManager == null)
         {
-            Debug.LogWarning("No ShopManager assigned on " + name);
+            Debug.LogWarning(name + " has no ShopManager assigned.");
             return;
         }
 
-        // Tell the shop to only show items from this category.
         shopManager.ShowCategory(categoryToShow);
     }
 }
