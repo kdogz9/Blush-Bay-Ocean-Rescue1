@@ -10,6 +10,9 @@ public class ShopManager : MonoBehaviour
     [SerializeField] private Button openShopButton;
     [SerializeField] private Button closeShopButton;
 
+    [Header("Category Heading")]
+    [SerializeField] private TMP_Text categoryHeadingText;
+    
     [Header("Scroll View")]
     [SerializeField] private Transform contentParent;
 
@@ -122,12 +125,15 @@ public class ShopManager : MonoBehaviour
             }
         }
 
-        Debug.Log("Showing category: " + categoryToShow + " | Items shown: " + itemsShown);
-        
-        if (shopScrollController != null)
+        // Change the heading text to match the selected category.
+        UpdateCategoryHeading(categoryToShow);
+
+        if (contentParent is RectTransform contentRect)
         {
-            shopScrollController.RefreshScrollView(true);
+            LayoutRebuilder.ForceRebuildLayoutImmediate(contentRect);
         }
+
+        Debug.Log("Showing category: " + categoryToShow + " | Items shown: " + itemsShown);
     }
 
     public void TryBuyItem(ShopItemData itemData)
@@ -166,6 +172,24 @@ public class ShopManager : MonoBehaviour
         {
             ShowMessage("Placement missing!");
             Debug.LogWarning("No PlacementManager assigned to ShopManager.");
+        }
+    }
+    
+    private void UpdateCategoryHeading(ShopCategory category)
+    {
+        if (categoryHeadingText == null) return;
+
+        if (category == ShopCategory.Tanks)
+        {
+            categoryHeadingText.text = "TANKS";
+        }
+        else if (category == ShopCategory.Machines)
+        {
+            categoryHeadingText.text = "MACHINES";
+        }
+        else if (category == ShopCategory.Decorations)
+        {
+            categoryHeadingText.text = "DECOR";
         }
     }
 
