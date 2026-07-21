@@ -19,6 +19,9 @@ public class PlacementManager : MonoBehaviour
     [SerializeField] private Color validPreviewColour = new Color(1f, 1f, 1f, 0.6f);
     [SerializeField] private Color invalidPreviewColour = new Color(1f, 0.3f, 0.3f, 0.6f);
 
+    [Header("Selling")]
+    [SerializeField] private bool isSellMode = false;
+
     // This stores the item we are currently trying to place.
     private PlaceableItem currentItemPrefab;
 
@@ -45,6 +48,13 @@ public class PlacementManager : MonoBehaviour
 
     private void Update()
     {
+        // If sell mode is active, handle selling first.
+        if (isSellMode)
+        {
+            HandleSellMode();
+            return;
+        }
+
         // TEST:
         // Press P to begin placing the test decoration.
         // Later, the shop button will start placement instead.
@@ -81,6 +91,9 @@ public class PlacementManager : MonoBehaviour
             return;
         }
 
+        // Stop sell mode if it was active.
+        isSellMode = false;
+
         // If we were already placing something, cancel the old preview first.
         if (isPlacing)
         {
@@ -101,6 +114,114 @@ public class PlacementManager : MonoBehaviour
         isPlacing = true;
 
         Debug.Log("Started placing: " + currentItemPrefab.ItemName);
+    }
+
+    public void BeginSellMode()
+    {
+        // If placement mode is active, stop it first.
+        if (isPlacing)
+        {
+            CancelPlacement();
+        }
+
+        isSellMode = true;
+
+        Debug.Log("Sell mode started. Click a placed item to sell it.");
+    }
+
+    public void CancelSellMode()
+    {
+        isSellMode = false;
+
+        Debug.Log("Sell mode cancelled.");
+    }
+
+    private void HandleSellMode()
+    {
+        // Right click or Escape cancels sell mode.
+        if (Mouse.current.rightButton.wasPressedThisFrame || Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            CancelSellMode();
+            return;
+        }
+
+        // Left click tries to sell the item under the mouse.
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            // Do not sell if clicking on UI.
+            if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
+            {
+                return;
+            }
+
+            TrySellItemUnderMouse();
+        }
+    }
+
+    private void TrySellItemUnderMouse()
+    {
+        Vector3 mouseWorldPosition = GetMouseWorldPosition();
+
+        // Check every collider under the mouse.
+        Collider2D[] hits = Physics2D.OverlapPointAll(mouseWorldPosition);
+
+        if (hits.Length == 0)
+        {
+            Debug.Log("No placed item clicked.");
+            return;
+        }
+
+        foreach (Collider2D hit in hits)
+        {
+            Debug.Log("Clicked collider: " + hit.name);
+
+            PlacedItem placedItem = hit.GetComponentInParent<PlacedItem>();
+
+            if (placedItem != null)
+            {
+                placedItem.Sell();
+                return;
+            }
+        }
+
+        Debug.Log("Clicked object is not a sellable placed item.");
+    }
+
+    public void SellPlacedItem(PlacedItem placedItem)
+    {
+        if (placedItem == null) return;
+
+        // Give the player the FULL item price back.
+        if (CurrencyManager.Instance != null)
+        {
+            CurrencyManager.Instance.AddMoney(placedItem.SellPrice);
+
+// Show money refunded popup.
+            if (MoneyPopUpManager.Instance != null)
+            {
+                MoneyPopUpManager.Instance.ShowMoneyChange(placedItem.SellPrice, true);
+            }
+            else
+            {
+                Debug.LogWarning("No MoneyPopUpManager found in the scene.");
+            }
+        }
+
+        // Free the grid cells this item was using.
+        List<Vector3Int> cellsToFree = placedItem.GetOccupiedCells();
+
+        foreach (Vector3Int cell in cellsToFree)
+        {
+            occupiedCells.Remove(cell);
+        }
+
+        Debug.Log("Sold " + placedItem.ItemName + " for " + placedItem.SellPrice + " shells.");
+
+        // Remove the item from the scene.
+        Destroy(placedItem.gameObject);
+
+        // Exit sell mode after selling one item.
+        CancelSellMode();
     }
 
     private void UpdatePreviewPosition()
@@ -131,7 +252,6 @@ public class PlacementManager : MonoBehaviour
     private void TryPlaceItem()
     {
         // If the mouse is over UI, do not place the item.
-        // This will be useful later when your shop panel is open.
         if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
         {
             return;
@@ -149,11 +269,21 @@ public class PlacementManager : MonoBehaviour
         {
             bool paidSuccessfully = CurrencyManager.Instance.TrySpendMoney(currentItemPrefab.Price);
 
-            // If the player cannot afford it, stop here.
+// If the player cannot afford it, stop here.
             if (!paidSuccessfully)
             {
                 Debug.Log("Not enough shells to place this item.");
                 return;
+            }
+
+// Show money taken popup.
+            if (MoneyPopUpManager.Instance != null)
+            {
+                MoneyPopUpManager.Instance.ShowMoneyChange(currentItemPrefab.Price, false);
+            }
+            else
+            {
+                Debug.LogWarning("No MoneyPopUpManager found in the scene.");
             }
         }
 
@@ -165,6 +295,29 @@ public class PlacementManager : MonoBehaviour
 
         // Make sure the real item is not transparent and has its collider on.
         SetPreviewMode(placedItem, false);
+
+        // Get the cells this item is using.
+        List<Vector3Int> cellsUsed = GetCellsForItem(currentCell, placedItem);
+
+        // Add selling data to the placed item.
+        PlacedItem placedItemData = placedItem.GetComponent<PlacedItem>();
+
+        if (placedItemData == null)
+        {
+            placedItemData = placedItem.gameObject.AddComponent<PlacedItem>();
+        }
+
+        // FULL REFUND:
+        // The sell price is the same as the original price.
+        int sellPrice = placedItem.Price;
+
+        placedItemData.Setup(
+            placedItem.ItemName,
+            placedItem.Price,
+            sellPrice,
+            cellsUsed,
+            this
+        );
 
         // Mark the grid cells as occupied so nothing else can be placed there.
         MarkCellsAsOccupied(currentCell, placedItem);
@@ -197,7 +350,6 @@ public class PlacementManager : MonoBehaviour
         Vector2 mouseScreenPosition = Mouse.current.position.ReadValue();
 
         // Convert screen position to world position.
-        // The Z distance is how far the camera is from the gameplay plane.
         Vector3 mouseWorldPosition = mainCamera.ScreenToWorldPoint(
             new Vector3(
                 mouseScreenPosition.x,
@@ -211,6 +363,26 @@ public class PlacementManager : MonoBehaviour
 
         // Convert the world position into a grid cell.
         return grid.WorldToCell(mouseWorldPosition);
+    }
+
+    private Vector3 GetMouseWorldPosition()
+    {
+        // Read the mouse position on the screen.
+        Vector2 mouseScreenPosition = Mouse.current.position.ReadValue();
+
+        // Convert screen position to world position.
+        Vector3 mouseWorldPosition = mainCamera.ScreenToWorldPoint(
+            new Vector3(
+                mouseScreenPosition.x,
+                mouseScreenPosition.y,
+                Mathf.Abs(mainCamera.transform.position.z)
+            )
+        );
+
+        // Keep it on the 2D plane.
+        mouseWorldPosition.z = 0f;
+
+        return mouseWorldPosition;
     }
 
     private Vector3 GetWorldPositionForItem(Vector3Int originCell, PlaceableItem item)

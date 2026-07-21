@@ -26,7 +26,10 @@ public class ShopManager : MonoBehaviour
     [SerializeField] private TMP_Text shopMessageText;
     
     [Header("Scroll View Controller")]
-    [SerializeField] private ShopScrollController shopScrollController;
+    [SerializeField] private ShopScrollController shopScrollController; 
+    
+    [Header("Sell Button")]
+    [SerializeField] private Button sellButton;
 
     private readonly List<ShopItemButton> shopItems = new List<ShopItemButton>();
 
@@ -58,6 +61,23 @@ public class ShopManager : MonoBehaviour
         }
 
         ShowMessage("");
+        
+        if (sellButton != null)
+        {
+            sellButton.onClick.AddListener(StartSellMode);
+        }
+    } 
+    private void StartSellMode()
+    {
+        if (placementManager == null)
+        {
+            Debug.LogWarning("No PlacementManager assigned to ShopManager.");
+            return;
+        }
+
+        placementManager.BeginSellMode();
+
+        CloseShop();
     }
 
     private void FindShopItems()
