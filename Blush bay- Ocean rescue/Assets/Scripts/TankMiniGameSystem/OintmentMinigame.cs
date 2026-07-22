@@ -33,6 +33,9 @@ public class OintmentMiniGame : MonoBehaviour
     // This stores the tank/fish we are currently treating
     private Tank currentTank;
 
+    // This controls the injured idle fish animation
+    private MiniGameFishAnimator miniGameFishAnimator;
+
     // Is the mini game currently running?
     private bool gameRunning = false;
 
@@ -43,6 +46,12 @@ public class OintmentMiniGame : MonoBehaviour
     {
         // Save this as the main mini game
         Instance = this;
+
+        // Get the fish animator from the fish image if it exists
+        if (miniGameFishImage != null)
+        {
+            miniGameFishAnimator = miniGameFishImage.GetComponent<MiniGameFishAnimator>();
+        }
 
         // Hide the mini game at the start
         panel.SetActive(false);
@@ -87,13 +96,9 @@ public class OintmentMiniGame : MonoBehaviour
         titleText.text = "APPLY OINTMENT";
         resultText.text = "";
 
-        // Show the current fish on the mini game panel
-        if (miniGameFishImage != null)
-        {
-            miniGameFishImage.sprite = currentTank.FishSpriteImage;
-            miniGameFishImage.preserveAspect = true;
-            miniGameFishImage.gameObject.SetActive(currentTank.FishSpriteImage != null);
-        }
+        // Show the injured fish animation if this fish has one.
+        // If it does not, show the normal fish sprite instead.
+        SetupMiniGameFishVisual();
 
         if (ointmentEffect != null)
         {
@@ -105,6 +110,48 @@ public class OintmentMiniGame : MonoBehaviour
 
         moveDirection = 1;
         gameRunning = true;
+    }
+
+    private void SetupMiniGameFishVisual()
+    {
+        // If no fish image is assigned, stop here.
+        if (miniGameFishImage == null) return;
+
+        // Make sure the fish image is visible.
+        miniGameFishImage.gameObject.SetActive(true);
+        miniGameFishImage.preserveAspect = true;
+
+        // Make sure we have the animator reference.
+        if (miniGameFishAnimator == null)
+        {
+            miniGameFishAnimator = miniGameFishImage.GetComponent<MiniGameFishAnimator>();
+        }
+
+        // If the current tank has injured idle frames, use those.
+        if (currentTank.InjuredIdleFrames != null && currentTank.InjuredIdleFrames.Length > 0)
+        {
+            if (miniGameFishAnimator != null)
+            {
+                miniGameFishAnimator.enabled = true;
+                miniGameFishAnimator.SetIdleFrames(currentTank.InjuredIdleFrames);
+            }
+            else
+            {
+                // Fallback if the animator script is missing.
+                miniGameFishImage.sprite = currentTank.InjuredIdleFrames[0];
+            }
+        }
+        else
+        {
+            // If no injured animation exists, turn off the animator and use the normal fish sprite.
+            if (miniGameFishAnimator != null)
+            {
+                miniGameFishAnimator.enabled = false;
+            }
+
+            miniGameFishImage.sprite = currentTank.FishSpriteImage;
+            miniGameFishImage.gameObject.SetActive(currentTank.FishSpriteImage != null);
+        }
     }
 
     private void MoveMarker()
@@ -251,6 +298,9 @@ public class OintmentMiniGame : MonoBehaviour
     {
         // Let player see the result
         yield return new WaitForSeconds(0.8f);
+
+        // Stop the mini game
+        gameRunning = false;
 
         // Hide panel
         panel.SetActive(false);

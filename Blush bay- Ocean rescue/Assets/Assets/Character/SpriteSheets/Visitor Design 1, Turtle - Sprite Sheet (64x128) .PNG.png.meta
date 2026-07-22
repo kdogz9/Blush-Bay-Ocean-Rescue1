@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: abaef0f0bb197484f91bc52810762082
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4702420238424209178
+    second: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_0
+  - first:
+      213: -4016261523248966036
+    second: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_1
+  - first:
+      213: 4231589981263368297
+    second: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_2
+  - first:
+      213: 2760449554877855166
+    second: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_3
+  - first:
+      213: 6146145016451138008
+    second: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_4
+  - first:
+      213: -3498668544671522224
+    second: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_5
+  - first:
+      213: 5934636315999297771
+    second: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_6
+  - first:
+      213: -69048423589280813
+    second: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_7
+  - first:
+      213: -4698466450873175171
+    second: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_8
+  - first:
+      213: -1365000673388565724
+    second: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_9
+  - first:
+      213: 8098459938876561381
+    second: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_10
+  - first:
+      213: 3934403217933096869
+    second: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_11
+  - first:
+      213: -8635585197987731658
+    second: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_12
+  - first:
+      213: 4252935614909058600
+    second: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_13
+  - first:
+      213: 2868892624960107956
+    second: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_14
+  - first:
+      213: -7848587629930339172
+    second: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 95
+        width: 13
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a17f1e7da4a524140800000000000000
+      internalID: 4702420238424209178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 95
+        width: 13
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c661da57c6f5348c0800000000000000
+      internalID: -4016261523248966036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 95
+        width: 9
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9601e440ba0a9ba30800000000000000
+      internalID: 4231589981263368297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_3
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 95
+        width: 9
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb531e2ae361f4620800000000000000
+      internalID: 2760449554877855166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 63
+        width: 13
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d18b9b245e7b4550800000000000000
+      internalID: 6146145016451138008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_5
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 63
+        width: 13
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0526500de7b327fc0800000000000000
+      internalID: -3498668544671522224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_6
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 63
+        width: 13
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be0654e49401c5250800000000000000
+      internalID: 5934636315999297771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_7
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 63
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d309a713d0ba0ff0800000000000000
+      internalID: -69048423589280813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_8
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 31
+        width: 9
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d733d9e08a1bbceb0800000000000000
+      internalID: -4698466450873175171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_9
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 31
+        width: 12
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42b6180ae1b8e0de0800000000000000
+      internalID: -1365000673388565724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_10
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 31
+        width: 11
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e7187c2862836070800000000000000
+      internalID: 8098459938876561381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_11
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 31
+        width: 11
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a75e00a1eec99630800000000000000
+      internalID: 3934403217933096869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 0
+        width: 11
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 637e156040d382880800000000000000
+      internalID: -8635585197987731658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_13
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 0
+        width: 11
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82e0343a866750b30800000000000000
+      internalID: 4252935614909058600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_14
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 0
+        width: 12
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b53c7174aa50d720800000000000000
+      internalID: 2868892624960107956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_15
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 0
+        width: 9
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c942a795227341390800000000000000
+      internalID: -7848587629930339172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_0: 4702420238424209178
+      Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_1: -4016261523248966036
+      Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_10: 8098459938876561381
+      Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_11: 3934403217933096869
+      Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_12: -8635585197987731658
+      Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_13: 4252935614909058600
+      Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_14: 2868892624960107956
+      Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_15: -7848587629930339172
+      Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_2: 4231589981263368297
+      Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_3: 2760449554877855166
+      Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_4: 6146145016451138008
+      Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_5: -3498668544671522224
+      Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_6: 5934636315999297771
+      Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_7: -69048423589280813
+      Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_8: -4698466450873175171
+      Visitor Design 1, Turtle - Sprite Sheet (64x128) .PNG_9: -1365000673388565724
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

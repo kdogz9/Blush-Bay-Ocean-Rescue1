@@ -14,6 +14,17 @@ public class Tank : MonoBehaviour
     [Header("Visuals")]
     [SerializeField] private GameObject fishSprite;
 
+    [Header("Fish Sprites")]
+    [SerializeField] private Sprite normalFishSprite;
+    [SerializeField] private Sprite injuredFishSprite;
+
+    [Header("Injured Fish Animation")]
+    [SerializeField] private Sprite[] injuredIdleFrames;
+
+    private SpriteRenderer fishSpriteRenderer;
+
+    public Sprite[] InjuredIdleFrames => injuredIdleFrames;
+
     // Other scripts can read these values
     public string FishName => fishName;
     public string IllnessName => illnessName;
@@ -24,18 +35,50 @@ public class Tank : MonoBehaviour
     // Fish is ready to release only if there is a fish and health is full
     public bool ReadyToRelease => hasFish && health >= maxHealth;
 
-    // This lets UI and mini games get the current fish sprite
+    // This lets the FishInfoUI and mini game get the correct fish sprite
     public Sprite FishSpriteImage
     {
         get
         {
-            if (fishSprite == null) return null;
+            if (!hasFish)
+            {
+                return null;
+            }
 
-            SpriteRenderer spriteRenderer = fishSprite.GetComponent<SpriteRenderer>();
+            // If fish is still injured, show injured sprite
+            if (!ReadyToRelease && injuredFishSprite != null)
+            {
+                return injuredFishSprite;
+            }
 
-            if (spriteRenderer == null) return null;
+            // If fish is healed, show normal sprite
+            if (normalFishSprite != null)
+            {
+                return normalFishSprite;
+            }
 
-            return spriteRenderer.sprite;
+            // Fallback if needed
+            if (fishSpriteRenderer != null)
+            {
+                return fishSpriteRenderer.sprite;
+            }
+
+            return null;
+        }
+    }
+
+    private void Awake()
+    {
+        // Get the SpriteRenderer from the fish sprite object
+        if (fishSprite != null)
+        {
+            fishSpriteRenderer = fishSprite.GetComponent<SpriteRenderer>();
+
+            // If the SpriteRenderer is on a child object instead, this still finds it
+            if (fishSpriteRenderer == null)
+            {
+                fishSpriteRenderer = fishSprite.GetComponentInChildren<SpriteRenderer>();
+            }
         }
     }
 
@@ -45,30 +88,36 @@ public class Tank : MonoBehaviour
         UpdateFishSprite();
     }
 
-    public void AddFish(string newFishName, Sprite newFishSprite, int startingHealth, int newMaxHealth, string newIllnessName)
+    public void AddFish(
+        string newFishName,
+        Sprite newFishSprite,
+        int startingHealth,
+        int newMaxHealth,
+        string newIllnessName,
+        Sprite newInjuredFishSprite = null,
+        Sprite[] newInjuredIdleFrames = null
+    )
     {
-        // Set new fish data
         fishName = newFishName;
         illnessName = newIllnessName;
+        health = startingHealth;
         maxHealth = newMaxHealth;
-
-        // Clamp keeps health between 0 and maxHealth
-        health = Mathf.Clamp(startingHealth, 0, maxHealth);
-
-        // Tank now has a fish
         hasFish = true;
 
-        // Change the visible fish sprite
-        if (fishSprite != null)
+        // Store the normal healthy sprite
+        normalFishSprite = newFishSprite;
+
+        // Only replace injured sprite if one is provided
+        // This means you can still assign the injured sprite manually on the Tank in the Inspector
+        if (newInjuredFishSprite != null)
         {
-            fishSprite.SetActive(true);
+            injuredFishSprite = newInjuredFishSprite;
+        }
 
-            SpriteRenderer spriteRenderer = fishSprite.GetComponent<SpriteRenderer>();
-
-            if (spriteRenderer != null)
-            {
-                spriteRenderer.sprite = newFishSprite;
-            }
+        // Only replace animation frames if some are provided
+        if (newInjuredIdleFrames != null && newInjuredIdleFrames.Length > 0)
+        {
+            injuredIdleFrames = newInjuredIdleFrames;
         }
 
         UpdateFishSprite();
@@ -78,16 +127,17 @@ public class Tank : MonoBehaviour
 
     public void HealFish(int healAmount)
     {
-        // If tank is empty, do not heal anything
         if (!hasFish) return;
 
-        // Add health
         health += healAmount;
 
-        // Stop health going above max
-        health = Mathf.Clamp(health, 0, maxHealth);
+        if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
 
-        Debug.Log(fishName + " healed to " + health + " / " + maxHealth);
+        // This changes from injured sprite to normal sprite once fully healed
+        UpdateFishSprite();
     }
 
     public void ReleaseFish()
@@ -113,5 +163,39 @@ public class Tank : MonoBehaviour
 
         // Show fish only if the tank has a fish
         fishSprite.SetActive(hasFish);
+
+        if (!hasFish)
+        {
+            if (fishSpriteRenderer != null)
+            {
+                fishSpriteRenderer.sprite = null;
+            }
+
+            return;
+        }
+
+        // Make sure we have the SpriteRenderer
+        if (fishSpriteRenderer == null)
+        {
+            fishSpriteRenderer = fishSprite.GetComponent<SpriteRenderer>();
+
+            if (fishSpriteRenderer == null)
+            {
+                fishSpriteRenderer = fishSprite.GetComponentInChildren<SpriteRenderer>();
+            }
+        }
+
+        if (fishSpriteRenderer == null) return;
+
+        // If the fish is injured, show injured sprite inside the tank
+        if (!ReadyToRelease && injuredFishSprite != null)
+        {
+            fishSpriteRenderer.sprite = injuredFishSprite;
+        }
+        else
+        {
+            // If the fish is healed, show normal sprite
+            fishSpriteRenderer.sprite = normalFishSprite;
+        }
     }
 }

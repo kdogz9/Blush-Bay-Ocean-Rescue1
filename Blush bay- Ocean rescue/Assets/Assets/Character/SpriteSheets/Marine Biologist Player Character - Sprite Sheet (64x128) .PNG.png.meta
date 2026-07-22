@@ -82,7 +82,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -96,7 +96,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -120,7 +120,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -161,12 +161,12 @@ TextureImporter:
       name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 95
-        width: 13
-        height: 27
+        x: 0
+        y: 96
+        width: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -183,12 +183,12 @@ TextureImporter:
       name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_1
       rect:
         serializedVersion: 2
-        x: 17
-        y: 95
-        width: 13
-        height: 27
+        x: 16
+        y: 96
+        width: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -205,12 +205,12 @@ TextureImporter:
       name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_2
       rect:
         serializedVersion: 2
-        x: 36
-        y: 95
-        width: 9
-        height: 27
+        x: 32
+        y: 96
+        width: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -227,12 +227,12 @@ TextureImporter:
       name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_3
       rect:
         serializedVersion: 2
-        x: 52
-        y: 95
-        width: 9
-        height: 27
+        x: 48
+        y: 96
+        width: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -249,12 +249,12 @@ TextureImporter:
       name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_4
       rect:
         serializedVersion: 2
-        x: 1
-        y: 63
-        width: 13
-        height: 27
+        x: 0
+        y: 64
+        width: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -271,12 +271,12 @@ TextureImporter:
       name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_5
       rect:
         serializedVersion: 2
-        x: 18
-        y: 63
-        width: 13
-        height: 28
+        x: 16
+        y: 64
+        width: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -293,12 +293,12 @@ TextureImporter:
       name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_6
       rect:
         serializedVersion: 2
-        x: 34
-        y: 63
-        width: 13
-        height: 27
+        x: 32
+        y: 64
+        width: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -315,12 +315,12 @@ TextureImporter:
       name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_7
       rect:
         serializedVersion: 2
-        x: 50
-        y: 63
-        width: 13
-        height: 26
+        x: 48
+        y: 64
+        width: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -337,12 +337,12 @@ TextureImporter:
       name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_8
       rect:
         serializedVersion: 2
-        x: 3
-        y: 31
-        width: 9
-        height: 27
+        x: 0
+        y: 32
+        width: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -359,12 +359,12 @@ TextureImporter:
       name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_9
       rect:
         serializedVersion: 2
-        x: 19
-        y: 31
-        width: 11
-        height: 27
+        x: 16
+        y: 32
+        width: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -381,12 +381,12 @@ TextureImporter:
       name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_10
       rect:
         serializedVersion: 2
-        x: 35
-        y: 31
-        width: 10
-        height: 28
+        x: 32
+        y: 32
+        width: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -403,12 +403,12 @@ TextureImporter:
       name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_11
       rect:
         serializedVersion: 2
-        x: 52
-        y: 31
-        width: 10
-        height: 27
+        x: 48
+        y: 32
+        width: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -425,12 +425,12 @@ TextureImporter:
       name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_12
       rect:
         serializedVersion: 2
-        x: 4
+        x: 0
         y: 0
-        width: 9
-        height: 26
+        width: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -447,12 +447,12 @@ TextureImporter:
       name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_13
       rect:
         serializedVersion: 2
-        x: 18
+        x: 16
         y: 0
-        width: 11
-        height: 26
+        width: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -469,12 +469,12 @@ TextureImporter:
       name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_14
       rect:
         serializedVersion: 2
-        x: 35
+        x: 32
         y: 0
-        width: 10
-        height: 27
+        width: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -491,12 +491,12 @@ TextureImporter:
       name: Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_15
       rect:
         serializedVersion: 2
-        x: 51
+        x: 48
         y: 0
-        width: 10
-        height: 26
+        width: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -513,7 +513,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4f403eafcc958ec4ba0f8f42979c754a
     internalID: 0
     vertices: []
     indices: 
@@ -521,7 +521,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_0: 6563402973264347191
       Marine Biologist Player Character - Sprite Sheet (64x128) .PNG_1: 5199671899274395826
