@@ -1311,7 +1311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436ea1dcfed7b204682a4dbacd5d816a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RescueSceneManager
-  aquariumSceneName: SampleScene
+  aquariumSceneName: AquariumScene
   rescuedFishPanel: {fileID: 1035788283}
   fishImage: {fileID: 93258545}
   fishNameText: {fileID: 685613576}

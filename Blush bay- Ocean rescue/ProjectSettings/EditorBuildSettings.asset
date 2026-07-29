@@ -9,10 +9,13 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: ded89d1cebc56224fb00252aae21cdab
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/AquariumScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/RescueScene.unity
     guid: 248673a798e34794aa2ed927a034b8d1
+  - enabled: 1
+    path: Assets/Scenes/DivingScene.unity
+    guid: c7fe13cf9fd608044b508a8c3be690b4
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: b799c9a64cf4f4b40931a0bdbb978a38, type: 3}

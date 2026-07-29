@@ -64,6 +64,6 @@ public class RescueSceneManager : MonoBehaviour
 
     public void ReturnToAquarium()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("AquariumScene");
     }
 }
