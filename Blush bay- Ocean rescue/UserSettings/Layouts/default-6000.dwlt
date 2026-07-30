@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Project
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 338}
   m_MaxSize: {x: 10000, y: 10000}
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -121,14 +121,14 @@ MonoBehaviour:
     y: 641
     width: 1431
     height: 292
-  m_MinSize: {x: 101, y: 126}
-  m_MaxSize: {x: 4001, y: 4026}
-  m_ActualView: {fileID: 18}
+  m_MinSize: {x: 231, y: 276}
+  m_MaxSize: {x: 10001, y: 10026}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
   - {fileID: 18}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -594,7 +594,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/TravelMapSystem
+    - Assets/Assets/UI/UI Assets/Shop
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -604,29 +604,29 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/TravelMapSystem
+  - Assets/Assets/UI/UI Assets/Shop
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\GitHub\Blush-Bay-Ocean-Rescue1\Blush bay- Ocean rescue
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 442}
+    scrollPos: {x: 0, y: 322}
     m_SelectedIDs:
-    - m_Data: 54292
+    - m_Data: 54226
     m_LastClickedID:
-      m_Data: 54292
+      m_Data: 54226
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 54078
-    - m_Data: 54080
-    - m_Data: 54082
-    - m_Data: 54084
-    - m_Data: 54086
     - m_Data: 54088
     - m_Data: 54090
     - m_Data: 54092
-    - m_Data: 54220
+    - m_Data: 54094
+    - m_Data: 54096
+    - m_Data: 54098
+    - m_Data: 54100
+    - m_Data: 54102
+    - m_Data: 54234
     - m_Data: 1000000000
     - m_Data: 2147483647
     m_RenameOverlay:
@@ -662,14 +662,14 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 54078
-    - m_Data: 54080
-    - m_Data: 54082
-    - m_Data: 54084
-    - m_Data: 54086
     - m_Data: 54088
     - m_Data: 54090
     - m_Data: 54092
+    - m_Data: 54094
+    - m_Data: 54096
+    - m_Data: 54098
+    - m_Data: 54100
+    - m_Data: 54102
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -698,10 +698,10 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: 52392
+    - m_Data: 54460
     m_LastClickedEntityId:
-      m_Data: 52392
-    m_HadKeyboardFocusLastEvent: 1
+      m_Data: 54460
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs:
     - m_Data: 52722
     - m_Data: 54506
@@ -831,16 +831,26 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: []
+      m_SelectedIDs:
+      - m_Data: 54460
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
+      - m_Data: -3458
+      - m_Data: -3282
+      - m_Data: -3160
+      - m_Data: -2888
+      - m_Data: -2714
+      - m_Data: -2596
+      - m_Data: -2464
+      - m_Data: -2338
+      - m_Data: -2164
+      - m_Data: -2038
       - m_Data: -1410
-      - m_Data: 52642
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: GlobeSprite
-        m_OriginalName: GlobeSprite
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
@@ -848,10 +858,10 @@ MonoBehaviour:
           width: 0
           height: 0
         m_UserData:
-          m_Data: -3248
+          m_Data: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
         m_ClientGUIView: {fileID: 4}
@@ -1360,7 +1370,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -2.0602257, y: -1.2724233, z: -0.051928554}
+    m_Target: {x: -1.7303259, y: -1.4055566, z: -0.05458669}
     speed: 2
     m_Value: {x: -2.0602257, y: -1.2724233, z: -0.051928554}
   m_RenderMode: 0
@@ -1413,7 +1423,7 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.907001
+    m_Target: 6.1728163
     speed: 2
     m_Value: 5.907001
   m_Ortho:
@@ -1532,15 +1542,15 @@ MonoBehaviour:
       width: 1101
       height: 594
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 666.1584, y: 307.9928}
+    m_Translation: {x: 652.6069, y: 303.63202}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -666.1584
-      y: -307.9928
+      x: -652.6069
+      y: -303.63202
       width: 1101
       height: 594
     m_MinimalGUI: 1
