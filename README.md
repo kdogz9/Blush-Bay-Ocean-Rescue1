@@ -4,7 +4,7 @@
 
 Blush Bay: Ocean Rescue is an aquarium management sim where players aim to restore the ocean by taking care of sick and injured marine life. 
 
-Players will rescue the fish in a mini game where they click on a bubble. The fish will get placed in a tank where its stats can be seen. The tanks will have certain conditions to be met to keep the fish stabalised whilst undergoing treatment. Treating the fish will involve mini games. Players can grow their own ingredients in a lab which will then need to be placed in machines to create the fish food. Visitors will look around the aquarium and donate based on the quality of the aquarium. When the marine life are all fully restored the player will be able to release them to be able to rescue more. Players will be able to buy new tanks and furniture from the shop with the donations given and decorate their aquarium however they like. 
+Players will rescue the fish in a mini game where they click on a bubble. The fish will get placed in a tank where its stats can be seen. The tanks will have certain conditions to be met to keep the fish stabalised whilst undergoing treatment. Treating the fish will involve mini games. Players can grow their own ingredients in a lab which will then need to be placed in machines to create the fish food. They will acquire the ingredients through going diving and using scissors to cut down seaweed and kelp etc. Visitors will look around the aquarium and donate based on the quality of the aquarium. When the marine life are all fully restored the player will be able to release them to be able to rescue more. Players will be able to buy new tanks and furniture from the shop with the donations given and decorate their aquarium however they like. 
 
 This game will be 2D pixel art, top down approach like Stardew Valley and Fields of Misteria. 
 
@@ -28,8 +28,9 @@ I've researched into aquarium floor plans and layouts to make the game as close 
 * Tank conditions - cleaniness, filters, decorations (happiness level)
 * Fish conditions - health, cleaniness, food requirements, happiness level 
 * Lab grown ingredients for fish food - kelp, seaweed etc 
-* Machines - fish food, filters 
+* Machines - fish food, filters , sanitising, reproducing 
 * Treating the fish 
+* Diving system to collect food 
 
 ## Future game mechanics 
 * Breeding - nursery , coloured variations etc 
