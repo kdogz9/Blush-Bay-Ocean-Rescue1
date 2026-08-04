@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Game
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 338}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 112}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 40
+  controlID: 36
   draggingID: 0
 --- !u!114 &3
 MonoBehaviour:
@@ -95,8 +95,8 @@ MonoBehaviour:
     y: 0
     width: 328
     height: 641
-  m_MinSize: {x: 201, y: 226}
-  m_MaxSize: {x: 4001, y: 4026}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 112}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 41
+  controlID: 37
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 56}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 42
+  controlID: 38
   draggingID: 0
 --- !u!114 &11
 MonoBehaviour:
@@ -594,7 +594,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/DivingSystem
+    - Assets/Scenes
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -604,29 +604,29 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/DivingSystem
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\GitHub\Blush-Bay-Ocean-Rescue1\Blush bay- Ocean rescue
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 360}
+    scrollPos: {x: 0, y: 266}
     m_SelectedIDs:
-    - m_Data: 54452
+    - m_Data: 52768
     m_LastClickedID:
-      m_Data: 54452
+      m_Data: 52768
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 54098
-    - m_Data: 54100
-    - m_Data: 54102
-    - m_Data: 54104
-    - m_Data: 54106
-    - m_Data: 54108
-    - m_Data: 54110
-    - m_Data: 54112
-    - m_Data: 54230
+    - m_Data: 52418
+    - m_Data: 52420
+    - m_Data: 52422
+    - m_Data: 52424
+    - m_Data: 52426
+    - m_Data: 52428
+    - m_Data: 52430
+    - m_Data: 52432
+    - m_Data: 52770
     - m_Data: 1000000000
     - m_Data: 2147483647
     m_RenameOverlay:
@@ -662,14 +662,14 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 54098
-    - m_Data: 54100
-    - m_Data: 54102
-    - m_Data: 54104
-    - m_Data: 54106
-    - m_Data: 54108
-    - m_Data: 54110
-    - m_Data: 54112
+    - m_Data: 52418
+    - m_Data: 52420
+    - m_Data: 52422
+    - m_Data: 52424
+    - m_Data: 52426
+    - m_Data: 52428
+    - m_Data: 52430
+    - m_Data: 52432
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -698,9 +698,9 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: 54456
+    - m_Data: 53474
     m_LastClickedEntityId:
-      m_Data: 54456
+      m_Data: 53474
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_Data: 52722
@@ -832,12 +832,53 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs:
-      - m_Data: 54456
+      - m_Data: 53474
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -4130
+      - m_Data: -57262
+      - m_Data: -55968
+      - m_Data: -55732
+      - m_Data: -54386
+      - m_Data: -53164
+      - m_Data: -51510
+      - m_Data: -51506
+      - m_Data: -51364
+      - m_Data: -51168
+      - m_Data: -48692
+      - m_Data: -48578
+      - m_Data: -45040
+      - m_Data: -42648
+      - m_Data: -40666
+      - m_Data: -39610
+      - m_Data: -24242
+      - m_Data: -23996
+      - m_Data: -23798
+      - m_Data: -23602
+      - m_Data: -23150
+      - m_Data: -21948
+      - m_Data: -21172
+      - m_Data: -20996
+      - m_Data: -10014
+      - m_Data: -7816
+      - m_Data: -6600
+      - m_Data: -6408
       - m_Data: -1410
+      - m_Data: 53506
+      - m_Data: 54672
+      - m_Data: 60352
+      - m_Data: 62608
+      - m_Data: 64944
+      - m_Data: 65422
+      - m_Data: 65542
+      - m_Data: 65654
+      - m_Data: 69304
+      - m_Data: 74556
+      - m_Data: 75160
+      - m_Data: 75884
+      - m_Data: 80616
+      - m_Data: 80708
+      - m_Data: 83566
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1361,9 +1402,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -1.8994234, y: -0.85331094, z: -0.03563595}
+    m_Target: {x: 969.6486, y: 547.66754, z: -3.1559587}
     speed: 2
-    m_Value: {x: -1.8994234, y: -0.85331094, z: -0.03563595}
+    m_Value: {x: 969.6486, y: 547.66754, z: -3.1559587}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1414,9 +1455,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.277734
+    m_Target: 396.98978
     speed: 2
-    m_Value: 4.277734
+    m_Value: 396.98978
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1533,15 +1574,15 @@ MonoBehaviour:
       width: 1101
       height: 594
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 652.6069, y: 303.63202}
+    m_Translation: {x: 667.3715, y: 300.17914}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -652.6069
-      y: -303.63202
+      x: -667.3715
+      y: -300.17914
       width: 1101
       height: 594
     m_MinimalGUI: 1
