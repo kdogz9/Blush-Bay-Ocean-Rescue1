@@ -1,6 +1,7 @@
-
 public enum IngredientType
 {
     Kelp,
-    Seaweed
+    Seaweed,
+    SanitisedKelp,
+    SanitisedSeaweed
 }

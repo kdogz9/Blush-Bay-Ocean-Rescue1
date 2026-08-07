@@ -67,7 +67,7 @@ public class BackpackUI : MonoBehaviour
 
         backpack = IngredientBackpack.Instance;
 
-        // Listen for changes, such as collecting kelp or seaweed.
+        // Listen for changes, such as collecting, sanitising, or removing ingredients.
         backpack.OnBackpackChanged -= UpdateBackpackUI;
         backpack.OnBackpackChanged += UpdateBackpackUI;
 
@@ -150,23 +150,28 @@ public class BackpackUI : MonoBehaviour
             return;
         }
 
-        // These warnings help you find missing Inspector references.
+        // Kelp text now shows raw kelp and clean kelp.
         if (kelpText == null)
         {
             Debug.LogWarning(name + " is missing Kelp Text.");
         }
         else
         {
-            kelpText.text = "Kelp x" + backpack.KelpAmount.ToString();
+            kelpText.text =
+                "Raw Kelp x" + backpack.KelpAmount.ToString() +
+                "\nClean Kelp x" + backpack.SanitisedKelpAmount.ToString();
         }
 
+        // Seaweed text now shows raw seaweed and clean seaweed.
         if (seaweedText == null)
         {
             Debug.LogWarning(name + " is missing Seaweed Text.");
         }
         else
         {
-            seaweedText.text = "Seaweed x" + backpack.SeaweedAmount.ToString();
+            seaweedText.text =
+                "Raw Seaweed x" + backpack.SeaweedAmount.ToString() +
+                "\nClean Seaweed x" + backpack.SanitisedSeaweedAmount.ToString();
         }
 
         UpdateNotificationBubble();
