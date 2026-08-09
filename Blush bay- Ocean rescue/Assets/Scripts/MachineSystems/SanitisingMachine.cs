@@ -14,9 +14,8 @@ public class SanitisingMachine : MonoBehaviour
     [SerializeField] private string playerTag = "Player";
     [SerializeField] private GameObject interactPrompt;
 
-    [Header("Machine Feedback")]
-    [SerializeField] private GameObject whirringEffect;
-    [SerializeField] private GameObject readyIcon;
+    [Header("Cleaning Effect")]
+    [SerializeField] private MachineCleaningEffect cleaningEffect;
 
     private bool playerNearby = false;
     private bool isProcessing = false;
@@ -28,6 +27,14 @@ public class SanitisingMachine : MonoBehaviour
     public bool IsProcessing => isProcessing;
     public bool ItemReadyToCollect => itemReadyToCollect;
 
+    private void Awake()
+    {
+        if (cleaningEffect == null)
+        {
+            cleaningEffect = GetComponent<MachineCleaningEffect>();
+        }
+    }
+
     private void Start()
     {
         if (interactPrompt != null)
@@ -35,14 +42,10 @@ public class SanitisingMachine : MonoBehaviour
             interactPrompt.SetActive(false);
         }
 
-        if (whirringEffect != null)
+        if (cleaningEffect != null)
         {
-            whirringEffect.SetActive(false);
-        }
-
-        if (readyIcon != null)
-        {
-            readyIcon.SetActive(false);
+            cleaningEffect.StopCleaningEffect();
+            cleaningEffect.HideReadyIcon();
         }
     }
 
@@ -58,21 +61,18 @@ public class SanitisingMachine : MonoBehaviour
 
     private void InteractWithMachine()
     {
-        // If the machine has finished, pressing E collects the clean item.
         if (itemReadyToCollect)
         {
             CollectCleanIngredient();
             return;
         }
 
-        // If the machine is working, do not open the panel.
         if (isProcessing)
         {
-            Debug.Log("Machine is still sanitising.");
+            Debug.Log("Sanitising machine is still cleaning.");
             return;
         }
 
-        // Otherwise open the small panel with only the two ingredient buttons.
         if (SanitisingMachineUI.Instance != null)
         {
             SanitisingMachineUI.Instance.OpenMachine(this);
@@ -97,6 +97,12 @@ public class SanitisingMachine : MonoBehaviour
             return false;
         }
 
+        if (rawIngredient != IngredientType.Kelp && rawIngredient != IngredientType.Seaweed)
+        {
+            Debug.LogWarning("Sanitising machine only accepts raw kelp or raw seaweed.");
+            return false;
+        }
+
         bool removedIngredient = IngredientBackpack.Instance.TryRemoveIngredient(rawIngredient, 1);
 
         if (!removedIngredient)
@@ -113,11 +119,6 @@ public class SanitisingMachine : MonoBehaviour
         {
             cleanIngredientReady = IngredientType.SanitisedSeaweed;
         }
-        else
-        {
-            Debug.LogWarning("Sanitising machine only accepts raw kelp or raw seaweed.");
-            return false;
-        }
 
         StartCoroutine(SanitiseRoutine());
 
@@ -129,45 +130,30 @@ public class SanitisingMachine : MonoBehaviour
         isProcessing = true;
         itemReadyToCollect = false;
 
-        if (whirringEffect != null)
+        if (cleaningEffect != null)
         {
-            whirringEffect.SetActive(true);
-            Debug.Log("Whirring effect ON.");
+            cleaningEffect.HideReadyIcon();
+            cleaningEffect.StartCleaningEffect();
         }
         else
         {
-            Debug.LogWarning("Whirring Effect is not assigned on SanitisingMachine.");
+            Debug.LogWarning("No MachineCleaningEffect assigned.");
         }
 
-        if (readyIcon != null)
-        {
-            readyIcon.SetActive(false);
-        }
-
-        Debug.Log("Machine started sanitising.");
+        Debug.Log("Machine started cleaning.");
 
         yield return new WaitForSeconds(processingTime);
 
         isProcessing = false;
         itemReadyToCollect = true;
 
-        if (whirringEffect != null)
+        if (cleaningEffect != null)
         {
-            whirringEffect.SetActive(false);
-            Debug.Log("Whirring effect OFF.");
+            cleaningEffect.StopCleaningEffect();
+            cleaningEffect.ShowReadyIcon();
         }
 
-        if (readyIcon != null)
-        {
-            readyIcon.SetActive(true);
-            Debug.Log("Ready icon ON.");
-        }
-        else
-        {
-            Debug.LogWarning("Ready Icon is not assigned on SanitisingMachine.");
-        }
-
-        Debug.Log("Machine finished. Item ready to collect.");
+        Debug.Log("Machine finished cleaning. Ready to collect.");
     }
 
     private void CollectCleanIngredient()
@@ -181,9 +167,9 @@ public class SanitisingMachine : MonoBehaviour
 
         itemReadyToCollect = false;
 
-        if (readyIcon != null)
+        if (cleaningEffect != null)
         {
-            readyIcon.SetActive(false);
+            cleaningEffect.HideReadyIcon();
         }
 
         Debug.Log("Collected clean ingredient: " + cleanIngredientReady);
