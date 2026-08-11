@@ -72,42 +72,20 @@ public class ReproducingMachine : MonoBehaviour
 
         if (Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
         {
-            InteractWithMachine();
+            OpenMachinePanel();
         }
     }
 
-    private void InteractWithMachine()
+    private void OpenMachinePanel()
     {
-        // If produce is ready, pressing E collects it.
-        if (itemReadyToCollect)
+        if (ReproducingMachineUI.Instance != null)
         {
-            CollectProducedItems();
-            return;
+            ReproducingMachineUI.Instance.OpenMachine(this);
         }
-
-        // If it is already reproducing, do not open the panel.
-        if (isReproducing)
+        else
         {
-            Debug.Log(machineName + " is still reproducing.");
-            return;
+            Debug.LogWarning("No ReproducingMachineUI found in the scene.");
         }
-
-        // If no ingredient has been loaded yet, open the panel.
-        if (!hasIngredientLoaded)
-        {
-            if (ReproducingMachineUI.Instance != null)
-            {
-                ReproducingMachineUI.Instance.OpenMachine(this);
-            }
-            else
-            {
-                Debug.LogWarning("No ReproducingMachineUI found in the scene.");
-            }
-
-            return;
-        }
-
-        Debug.Log(machineName + " is loaded but not currently reproducing.");
     }
 
     public bool TryLoadCleanIngredient(IngredientType cleanIngredient)
@@ -124,7 +102,6 @@ public class ReproducingMachine : MonoBehaviour
             return false;
         }
 
-        // This machine only accepts CLEAN kelp or CLEAN seaweed.
         if (cleanIngredient != IngredientType.SanitisedKelp &&
             cleanIngredient != IngredientType.SanitisedSeaweed)
         {
@@ -132,7 +109,6 @@ public class ReproducingMachine : MonoBehaviour
             return false;
         }
 
-        // Remove only 1 clean ingredient from the backpack.
         bool removed = IngredientBackpack.Instance.TryRemoveIngredient(cleanIngredient, 1);
 
         if (!removed)
@@ -153,10 +129,25 @@ public class ReproducingMachine : MonoBehaviour
         return true;
     }
 
-    private void StartReproducing()
+    public void StartReproducing()
     {
-        if (!hasIngredientLoaded) return;
-        if (isReproducing) return;
+        if (!hasIngredientLoaded)
+        {
+            Debug.Log("Cannot start. No ingredient loaded.");
+            return;
+        }
+
+        if (isReproducing)
+        {
+            Debug.Log("Machine is already reproducing.");
+            return;
+        }
+
+        if (itemReadyToCollect)
+        {
+            Debug.Log("Collect the ready items first.");
+            return;
+        }
 
         if (reproduceCoroutine != null)
         {
@@ -183,6 +174,7 @@ public class ReproducingMachine : MonoBehaviour
 
         isReproducing = false;
         itemReadyToCollect = true;
+        reproduceCoroutine = null;
 
         if (cleaningEffect != null)
         {
@@ -193,9 +185,13 @@ public class ReproducingMachine : MonoBehaviour
         Debug.Log(machineName + " has produced x" + amountProduced + " " + ingredientBeingReproduced);
     }
 
-    private void CollectProducedItems()
+    public bool CollectProducedItems()
     {
-        if (!itemReadyToCollect) return;
+        if (!itemReadyToCollect)
+        {
+            Debug.Log("Nothing ready to collect.");
+            return false;
+        }
 
         if (IngredientBackpack.Instance != null)
         {
@@ -211,8 +207,96 @@ public class ReproducingMachine : MonoBehaviour
 
         Debug.Log("Collected x" + amountProduced + " " + ingredientBeingReproduced);
 
-        // Because the original ingredient is still loaded, the machine starts again.
+        // Automatically starts again because the ingredient is still loaded.
         StartReproducing();
+
+        return true;
+    }
+
+    public void StopReproducing()
+    {
+        if (!isReproducing)
+        {
+            Debug.Log("Machine is not currently reproducing.");
+            return;
+        }
+
+        if (reproduceCoroutine != null)
+        {
+            StopCoroutine(reproduceCoroutine);
+            reproduceCoroutine = null;
+        }
+
+        isReproducing = false;
+        itemReadyToCollect = false;
+
+        if (cleaningEffect != null)
+        {
+            cleaningEffect.StopCleaningEffect();
+            cleaningEffect.HideReadyIcon();
+        }
+
+        Debug.Log(machineName + " stopped. Ingredient is still inside.");
+    }
+
+    public bool RemoveLoadedIngredient()
+    {
+        if (!hasIngredientLoaded)
+        {
+            Debug.Log("No ingredient to remove.");
+            return false;
+        }
+
+        if (isReproducing)
+        {
+            Debug.Log("Stop the machine before removing the ingredient.");
+            return false;
+        }
+
+        if (itemReadyToCollect)
+        {
+            Debug.Log("Collect ready items before removing the ingredient.");
+            return false;
+        }
+
+        if (IngredientBackpack.Instance != null)
+        {
+            IngredientBackpack.Instance.AddIngredient(ingredientBeingReproduced, 1);
+        }
+
+        ClearMachine();
+
+        Debug.Log("Removed loaded ingredient and returned x1 " + ingredientBeingReproduced);
+
+        return true;
+    }
+
+    public void ResetMachine()
+    {
+        if (reproduceCoroutine != null)
+        {
+            StopCoroutine(reproduceCoroutine);
+            reproduceCoroutine = null;
+        }
+
+        ClearMachine();
+
+        Debug.Log(machineName + " has been reset.");
+    }
+
+    private void ClearMachine()
+    {
+        hasIngredientLoaded = false;
+        isReproducing = false;
+        itemReadyToCollect = false;
+
+        if (cleaningEffect != null)
+        {
+            cleaningEffect.StopCleaningEffect();
+            cleaningEffect.HideReadyIcon();
+        }
+
+        SetMachineEmptyVisual();
     }
 
     private void SetMachineEmptyVisual()

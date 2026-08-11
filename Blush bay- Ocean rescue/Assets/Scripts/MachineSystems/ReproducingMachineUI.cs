@@ -8,9 +8,16 @@ public class ReproducingMachineUI : MonoBehaviour
     [Header("Panel")]
     [SerializeField] private GameObject panel;
 
-    [Header("Buttons")]
+    [Header("Add Buttons")]
     [SerializeField] private Button addCleanKelpButton;
     [SerializeField] private Button addCleanSeaweedButton;
+
+    [Header("Machine Control Buttons")]
+    [SerializeField] private Button collectButton;
+    [SerializeField] private Button stopButton;
+    [SerializeField] private Button startAgainButton;
+    [SerializeField] private Button removeButton;
+    [SerializeField] private Button resetButton;
     [SerializeField] private Button closeButton;
 
     private ReproducingMachine currentMachine;
@@ -28,19 +35,28 @@ public class ReproducingMachineUI : MonoBehaviour
     private void Start()
     {
         if (addCleanKelpButton != null)
-        {
             addCleanKelpButton.onClick.AddListener(AddCleanKelp);
-        }
 
         if (addCleanSeaweedButton != null)
-        {
             addCleanSeaweedButton.onClick.AddListener(AddCleanSeaweed);
-        }
+
+        if (collectButton != null)
+            collectButton.onClick.AddListener(CollectItems);
+
+        if (stopButton != null)
+            stopButton.onClick.AddListener(StopMachine);
+
+        if (startAgainButton != null)
+            startAgainButton.onClick.AddListener(StartAgain);
+
+        if (removeButton != null)
+            removeButton.onClick.AddListener(RemoveIngredient);
+
+        if (resetButton != null)
+            resetButton.onClick.AddListener(ResetMachine);
 
         if (closeButton != null)
-        {
             closeButton.onClick.AddListener(ClosePanel);
-        }
     }
 
     public void OpenMachine(ReproducingMachine machine)
@@ -51,6 +67,8 @@ public class ReproducingMachineUI : MonoBehaviour
         {
             panel.SetActive(true);
         }
+
+        UpdateButtons();
 
         Debug.Log("Reproducing machine panel opened.");
     }
@@ -67,7 +85,7 @@ public class ReproducingMachineUI : MonoBehaviour
         }
         else
         {
-            Debug.Log("Could not add clean kelp.");
+            UpdateButtons();
         }
     }
 
@@ -83,8 +101,64 @@ public class ReproducingMachineUI : MonoBehaviour
         }
         else
         {
-            Debug.Log("Could not add clean seaweed.");
+            UpdateButtons();
         }
+    }
+
+    private void CollectItems()
+    {
+        if (currentMachine == null) return;
+
+        bool collected = currentMachine.CollectProducedItems();
+
+        if (collected)
+        {
+            ClosePanel();
+        }
+        else
+        {
+            UpdateButtons();
+        }
+    }
+
+    private void StopMachine()
+    {
+        if (currentMachine == null) return;
+
+        currentMachine.StopReproducing();
+        UpdateButtons();
+    }
+
+    private void StartAgain()
+    {
+        if (currentMachine == null) return;
+
+        currentMachine.StartReproducing();
+        ClosePanel();
+    }
+
+    private void RemoveIngredient()
+    {
+        if (currentMachine == null) return;
+
+        bool removed = currentMachine.RemoveLoadedIngredient();
+
+        if (removed)
+        {
+            ClosePanel();
+        }
+        else
+        {
+            UpdateButtons();
+        }
+    }
+
+    private void ResetMachine()
+    {
+        if (currentMachine == null) return;
+
+        currentMachine.ResetMachine();
+        ClosePanel();
     }
 
     public void ClosePanel()
@@ -97,5 +171,42 @@ public class ReproducingMachineUI : MonoBehaviour
         currentMachine = null;
 
         Debug.Log("Reproducing machine panel closed.");
+    }
+
+    private void UpdateButtons()
+    {
+        if (currentMachine == null) return;
+
+        bool empty = !currentMachine.HasIngredientLoaded;
+        bool reproducing = currentMachine.IsReproducing;
+        bool ready = currentMachine.ItemReadyToCollect;
+        bool stoppedWithIngredient =
+            currentMachine.HasIngredientLoaded &&
+            !currentMachine.IsReproducing &&
+            !currentMachine.ItemReadyToCollect;
+
+        if (addCleanKelpButton != null)
+            addCleanKelpButton.gameObject.SetActive(empty);
+
+        if (addCleanSeaweedButton != null)
+            addCleanSeaweedButton.gameObject.SetActive(empty);
+
+        if (collectButton != null)
+            collectButton.gameObject.SetActive(ready);
+
+        if (stopButton != null)
+            stopButton.gameObject.SetActive(reproducing);
+
+        if (startAgainButton != null)
+            startAgainButton.gameObject.SetActive(stoppedWithIngredient);
+
+        if (removeButton != null)
+            removeButton.gameObject.SetActive(stoppedWithIngredient);
+
+        if (resetButton != null)
+            resetButton.gameObject.SetActive(!empty);
+
+        if (closeButton != null)
+            closeButton.gameObject.SetActive(true);
     }
 }
