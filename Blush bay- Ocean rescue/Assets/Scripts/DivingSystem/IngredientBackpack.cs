@@ -16,6 +16,11 @@ public class IngredientBackpack : MonoBehaviour
     [Header("Notification")]
     [SerializeField] private bool hasNewItems = false;
     [SerializeField] private string latestNotification = "";
+    
+    [Header("Food")]
+    [SerializeField] private int fishFoodAmount = 0;
+
+    public int FishFoodAmount => fishFoodAmount;
 
     public event Action OnBackpackChanged;
 
@@ -65,6 +70,12 @@ public class IngredientBackpack : MonoBehaviour
         {
             sanitisedSeaweedAmount += amount;
             latestNotification = "+" + amount + " Clean Seaweed";
+        }
+        
+        else if (ingredientType == IngredientType.FishFood)
+        {
+            fishFoodAmount += amount;
+            latestNotification = "+" + amount + " Fish Food";
         }
 
         hasNewItems = true;

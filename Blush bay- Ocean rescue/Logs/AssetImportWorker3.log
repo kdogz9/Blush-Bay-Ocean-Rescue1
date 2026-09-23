@@ -1,6 +1,6 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
 Built from '6000.4/staging' branch; Version is '6000.4.10f1 (feeafc12a938) revision 16706300'; Using compiler version '194234433'; Build Type 'Release'
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-keish" at "2026-09-23T12:42:51.4334449Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-keish" at "2026-09-23T12:42:51.4383416Z"
 OS: 'Windows 11  (10.0.26200) Professional' Language: 'en' Physical Memory: 31860 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
 System  architecture: x64
@@ -13,11 +13,11 @@ C:\Program Files\Unity\Hub\Editor\6000.4.10f1\Editor\Unity.exe
 -batchMode
 -noUpm
 -name
-AssetImportWorker2
+AssetImportWorker3
 -projectPath
 C:/GitHub/Blush-Bay-Ocean-Rescue1/Blush bay- Ocean rescue
 -logFile
-Logs/AssetImportWorker2.log
+Logs/AssetImportWorker3.log
 -srvPort
 54998
 -licensingIpc
@@ -68,12 +68,12 @@ C:/GitHub/Blush-Bay-Ocean-Rescue1/Blush bay- Ocean rescue
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [17412]  Target information:
+Player connection [23116]  Target information:
 
-Player connection [17412]  * "[IP] 192.168.1.69 [Port] 0 [Flags] 2 [Guid] 2049779346 [EditorId] 2049779346 [Version] 1048832 [Id] WindowsEditor(7,K-Baddie) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [23116]  * "[IP] 192.168.1.69 [Port] 0 [Flags] 2 [Guid] 1393778672 [EditorId] 1393778672 [Version] 1048832 [Id] WindowsEditor(7,K-Baddie) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [17412] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [17412] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [23116] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [23116] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 7
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -85,7 +85,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 2.97 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 3.04 ms, found 5 plugins.
 Initialize engine version: 6000.4.10f1 (feeafc12a938)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.4.10f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/GitHub/Blush-Bay-Ocean-Rescue1/Blush bay- Ocean rescue/Assets
@@ -103,13 +103,13 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.4.10f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.4.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.4.10f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56420
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56184
 CodeReloadManager initialized
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.10f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001415 seconds.
+Registered in 0.001258 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Package Manager log level set to [2]
@@ -118,40 +118,40 @@ Package Manager log level set to [2]
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.246 seconds
-Domain Reload Profiling: 527ms
-	BeginReloadAssembly (80ms)
-	RebuildCommonClasses (24ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (45ms)
-	LoadAllAssembliesAndSetupDomain (124ms)
-		LoadAssemblies (78ms)
-		AnalyzeDomain (118ms)
-			TypeCache.Refresh (116ms)
-				TypeCache.ScanAssembly (107ms)
-	FinalizeReload (246ms)
-		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (30ms)
-			BeforeProcessingInitializeOnLoad (50ms)
-			ProcessInitializeOnLoadAttributes (66ms)
-			ProcessInitializeOnLoadMethodAttributes (51ms)
 [Licensing::Client] Error: HandshakeResponse reported an error:
 	ResponseCode: 505
 	ResponseStatus: Unsupported protocol version '1.18.1'.
 [Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-keish"
 [Licensing::IpcConnector] LicenseClient-keish channel disconnected successfully.
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-keish-6000.4.10" at "2026-09-23T12:42:52.5253518Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-keish-6000.4.10" at "2026-09-23T12:42:52.529149Z"
 [Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 11896, path: "C:/Program Files/Unity/Hub/Editor/6000.4.10f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
 [Licensing::Module] LicensingClient has failed validation; ignoring
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.18.1+9fbee8e
-  Session Id:              4346aa5c37224d07a23a3fb9aa2eb9f0
+  Session Id:              f4d05e53bab04d569b51c8991bc430fd
   Correlation Id:          83fc37fdbf6c39ed70ac56eddb87d4c2
-  External correlation Id: 4992093170543520476
+  External correlation Id: 3449129912760772704
   Machine Id:              /RzPr2gAIPSB4NcypRRRBkxSfUM=
 [Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-keish-6000.4.10" (connect: 0.00s, validation: 0.00s, handshake: 0.01s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-keish-6000.4.10-notifications" at "2026-09-23T12:42:52.5321196Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-keish-6000.4.10-notifications" at "2026-09-23T12:42:52.5352757Z"
 [Licensing::Module] Licensing Background thread has ended after 1.10s
+- Finished resetting the current domain, in  0.247 seconds
+Domain Reload Profiling: 542ms
+	BeginReloadAssembly (80ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (44ms)
+	LoadAllAssembliesAndSetupDomain (139ms)
+		LoadAssemblies (78ms)
+		AnalyzeDomain (132ms)
+			TypeCache.Refresh (130ms)
+				TypeCache.ScanAssembly (120ms)
+	FinalizeReload (248ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (29ms)
+			BeforeProcessingInitializeOnLoad (52ms)
+			ProcessInitializeOnLoadAttributes (64ms)
+			ProcessInitializeOnLoadMethodAttributes (52ms)
 ========================================================================
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
@@ -211,98 +211,66 @@ Native extension for WebGL target not found
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.483 seconds
-Domain Reload Profiling: 1033ms
-	BeginReloadAssembly (117ms)
+- Finished resetting the current domain, in  0.481 seconds
+Domain Reload Profiling: 1023ms
+	BeginReloadAssembly (107ms)
 		DisableScriptedObjects (3ms)
-		CreateAndSetChildDomain (25ms)
+		CreateAndSetChildDomain (24ms)
 	RebuildCommonClasses (22ms)
 	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (45ms)
+	initialDomainReloadingComplete (44ms)
 	LoadAllAssembliesAndSetupDomain (358ms)
-		LoadAssemblies (233ms)
+		LoadAssemblies (231ms)
 		AnalyzeDomain (181ms)
-			TypeCache.Refresh (118ms)
-				TypeCache.ScanAssembly (108ms)
-			BuildScriptInfoCaches (55ms)
+			TypeCache.Refresh (116ms)
+				TypeCache.ScanAssembly (106ms)
+			BuildScriptInfoCaches (57ms)
 			ResolveRequiredComponents (7ms)
-	FinalizeReload (484ms)
+	FinalizeReload (482ms)
 		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (85ms)
-			ProcessInitializeOnLoadAttributes (210ms)
-			ProcessInitializeOnLoadMethodAttributes (79ms)
+			BeforeProcessingInitializeOnLoad (84ms)
+			ProcessInitializeOnLoadAttributes (207ms)
+			ProcessInitializeOnLoadMethodAttributes (80ms)
 			AfterProcessingInitializeOnLoad (4ms)
 		AwakeInstancesAfterBackupRestoration (6ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
 Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7474 unused Assets / (5.3 MB). Loaded Objects now: 8316.
-Memory consumption went from 168.0 MB to 162.6 MB.
-Total: 7.010000 ms (FindLiveObjects: 0.754600 ms CreateObjectMapping: 0.220700 ms MarkObjects: 4.218700 ms  DeleteObjects: 1.814100 ms)
+Unloading 7474 unused Assets / (5.4 MB). Loaded Objects now: 8316.
+Memory consumption went from 170.3 MB to 164.9 MB.
+Total: 7.075600 ms (FindLiveObjects: 0.763000 ms CreateObjectMapping: 0.242900 ms MarkObjects: 4.219700 ms  DeleteObjects: 1.848500 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 94073.468905 seconds.
-  path: Assets/Assets/ShopItems/Bookshelf (32x32).png
-  importAddress: Guid(33999db689247b64a97162faea93956b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/ShopItems/Bookshelf (32x32).png using Guid(33999db689247b64a97162faea93956b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'af1c9afed4b53bca6ae99794564239bd') in 0.0714002 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=18a1620f79ba7a4f046b5e3cf2ef37fa DependenciesID=2fb22e7d98c8f0a3ec14edbe2e96ca9d StaticDependenciesID=a6084ef7a17b8bba1d0392fd317a41eb 
+  Time since last request: 94073.469334 seconds.
+  path: Assets/Assets/ShopItems/Info Stand (16x32).png
+  importAddress: Guid(9ebbd362a70a7644abb0f8a59e7d291a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/ShopItems/Info Stand (16x32).png using Guid(9ebbd362a70a7644abb0f8a59e7d291a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'fe28ec42a7164e8972968d6b3b07c67b') in 0.072336 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cf201478b8feeae8d702481ad999f8c5 DependenciesID=74c02982be4c37020690b9aa3c72666a StaticDependenciesID=ad50ab992ff5e3b04cc0840cbf345fc1 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Assets/ShopItems/Large Potted Plant (24x32).png
-  importAddress: Guid(11072c0a908b1254c8bbbd85ff87e59f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/ShopItems/Large Potted Plant (24x32).png using Guid(11072c0a908b1254c8bbbd85ff87e59f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '65e78dde238eb5a9709a14efc09335bb') in 0.0101444 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f13149643d0a756f3d9458327717815e DependenciesID=7e886753b6d2fe16da495da50d3a33c2 StaticDependenciesID=b9b509ec5b511316207b8958d89920c6 
+  Time since last request: 3.267987 seconds.
+  path: Assets/Assets/ShopItems/Small Potted Plant (16x24).png
+  importAddress: Guid(aa1ba7419ae161940899daf5de026aee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/ShopItems/Small Potted Plant (16x24).png using Guid(aa1ba7419ae161940899daf5de026aee) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '31cbd359a24610d243bc8a7e5858b5c2') in 0.0092607 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=88df19637d3addc0dfdcc8e39787f62c DependenciesID=29a23c22f30e78eb2aaf719a867e30cb StaticDependenciesID=a5d4449b5ee161a5268de01f7652d98c 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 3.232562 seconds.
-  path: Assets/Assets/ShopItems/Small Bin (16x16).png
-  importAddress: Guid(0d1053e72a839464c811aec586b8d658) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/ShopItems/Small Bin (16x16).png using Guid(0d1053e72a839464c811aec586b8d658) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'ab56eea277f364e029e44602e8c89e13') in 0.0190822 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=87f2376d9ed95590da33f8bd1ee23aed DependenciesID=d97957959bd211fa2d4ece7a09acab87 StaticDependenciesID=f70645f6cf6d7fa81b0658b677b6542e 
+  Time since last request: 12.175375 seconds.
+  path: Assets/Assets/Furniture/Tank/Medium Tank (64x48).png
+  importAddress: Guid(86414f2bb6da49243a04f121d5c4d816) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Furniture/Tank/Medium Tank (64x48).png using Guid(86414f2bb6da49243a04f121d5c4d816) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '71a7b3934daf0ba7c845ecb67121573f') in 0.0114974 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8b7d5adacfcb6d1a5d16463bb967b459 DependenciesID=91a5a9ce4d6922c2052072f34cfe52dd StaticDependenciesID=8c47b0f9662b0dd64d1fa49feb1b5574 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.166217 seconds.
-  path: Assets/Assets/Furniture/Tank/Large Tank (96x64).png
-  importAddress: Guid(aa8b74248fbf96e4790c0d75d684b45a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Furniture/Tank/Large Tank (96x64).png using Guid(aa8b74248fbf96e4790c0d75d684b45a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'a6470d0ed0c64d5ae67ae087f65f8eb2') in 0.0115345 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4967346d30b35c825568c30e1c25e34a DependenciesID=f6d2dbfab40de276921c7a270e47eaae StaticDependenciesID=c7cda34d8ff8b46311ce7946eed2466a 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.556451 seconds.
-  path: Assets/Assets/Furniture/Tank/Small Tank (48x32) .png
-  importAddress: Guid(2a7025eaff5f991419b549c5679e81a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Furniture/Tank/Small Tank (48x32) .png using Guid(2a7025eaff5f991419b549c5679e81a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '3bd898a48d3efaf67eda718bedaffce6') in 0.0111341 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e991ab717112a960a0e311bd2d586f36 DependenciesID=0fed8e623d5662deb72bf90c88f453ce StaticDependenciesID=1778cc18186101d9daede5bd44e94fa8 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 424.865585 seconds.
-  path: Assets/Scripts/DivingSystem/IngredientType.cs
-  importAddress: Guid(3e2d807f00c3746449dba98931574295) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DivingSystem/IngredientType.cs using Guid(3e2d807f00c3746449dba98931574295) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'db381e21be56ec2b9bcd897c5672cc55') in 0.0006945 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a36d6fe5a372bcdb3ac4346edacbe583 DependenciesID=8c014916e2109488efa937714a378cd8 StaticDependenciesID=2005bf008e61954d7cd96fd2865f9de8 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Prepare
 Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7457 unused Assets / (5.8 MB). Loaded Objects now: 8336.
-Memory consumption went from 167.0 MB to 161.2 MB.
-Total: 11.049200 ms (FindLiveObjects: 1.203300 ms CreateObjectMapping: 0.559900 ms MarkObjects: 6.436500 ms  DeleteObjects: 2.848200 ms)
+Unloading 7457 unused Assets / (6.6 MB). Loaded Objects now: 8331.
+Memory consumption went from 169.2 MB to 162.6 MB.
+Total: 10.390000 ms (FindLiveObjects: 0.868800 ms CreateObjectMapping: 0.903900 ms MarkObjects: 5.601300 ms  DeleteObjects: 3.014500 ms)
 
 Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 26.465135 seconds.
-  path: Assets/Scripts/DivingSystem/IngredientType.cs
-  importAddress: Guid(3e2d807f00c3746449dba98931574295) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DivingSystem/IngredientType.cs using Guid(3e2d807f00c3746449dba98931574295) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '83ce9dba3219f2284ead0faa96164a7a') in 0.0005976 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a36d6fe5a372bcdb3ac4346edacbe583 DependenciesID=1fc88ceeb8cfe248830794f37fe38bc6 StaticDependenciesID=4f9a6f979e6dec991915f0171d289224 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
@@ -356,128 +324,144 @@ Native extension for WebGL target not found
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.625 seconds
+- Finished resetting the current domain, in  0.629 seconds
 Domain Reload Profiling: 1380ms
 	BeginReloadAssembly (208ms)
-		DisableScriptedObjects (10ms)
-		CreateAndSetChildDomain (56ms)
-	RebuildCommonClasses (38ms)
-	RebuildNativeTypeToScriptingClass (15ms)
-	initialDomainReloadingComplete (66ms)
-	LoadAllAssembliesAndSetupDomain (427ms)
-		LoadAssemblies (311ms)
-		AnalyzeDomain (199ms)
-			TypeCache.Refresh (11ms)
-			BuildScriptInfoCaches (177ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (625ms)
+		DisableScriptedObjects (9ms)
+		CreateAndSetChildDomain (52ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (68ms)
+	LoadAllAssembliesAndSetupDomain (421ms)
+		LoadAssemblies (320ms)
+		AnalyzeDomain (187ms)
+			TypeCache.Refresh (8ms)
+			BuildScriptInfoCaches (166ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (630ms)
 		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (123ms)
-			ProcessInitializeOnLoadAttributes (271ms)
-			ProcessInitializeOnLoadMethodAttributes (62ms)
+			BeforeProcessingInitializeOnLoad (131ms)
+			ProcessInitializeOnLoadAttributes (268ms)
+			ProcessInitializeOnLoadMethodAttributes (63ms)
 			AfterProcessingInitializeOnLoad (5ms)
-		AwakeInstancesAfterBackupRestoration (14ms)
-Refreshing native plugins compatible for Editor in 3.14 ms, found 5 plugins.
+		AwakeInstancesAfterBackupRestoration (12ms)
+Refreshing native plugins compatible for Editor in 2.90 ms, found 5 plugins.
 Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7472 unused Assets / (5.8 MB). Loaded Objects now: 8339.
-Memory consumption went from 171.9 MB to 166.0 MB.
-Total: 9.804800 ms (FindLiveObjects: 1.120400 ms CreateObjectMapping: 0.466600 ms MarkObjects: 5.458600 ms  DeleteObjects: 2.757900 ms)
+Unloading 7472 unused Assets / (6.4 MB). Loaded Objects now: 8334.
+Memory consumption went from 175.3 MB to 168.9 MB.
+Total: 9.669400 ms (FindLiveObjects: 0.951100 ms CreateObjectMapping: 0.636500 ms MarkObjects: 5.032400 ms  DeleteObjects: 3.047800 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Import Request.
-  Time since last request: 31.499248 seconds.
-  path: Assets/Assets/UI/Fonts/Kenney Future SDF.asset
-  importAddress: Guid(0dc8b6c580dad4340b6fc31b066436f9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Assets/UI/Fonts/Kenney Future SDF.asset using Guid(0dc8b6c580dad4340b6fc31b066436f9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'bcc47d3f7f7ef2f316f3d48d0900a90d') in 0.0882944 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a953b7ea5701f7dc5631052dd25f0914 DependenciesID=afd44ebf2796c88b14e45eef893c6ff9 StaticDependenciesID=fcec6f0022da25fafbf5a86de8afd1fe 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
+  Time since last request: 485.485792 seconds.
+  path: Assets/Scenes/RescueScene.unity
+  importAddress: Guid(248673a798e34794aa2ed927a034b8d1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scenes/RescueScene.unity using Guid(248673a798e34794aa2ed927a034b8d1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '57ea9b7ff648ade22323a1bf0f1d62a5') in 0.0427661 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2c93fa309e007530bdf88bd3e08937c6 DependenciesID=3f98d160fda2c96b8c78b34bd1f71ea1 StaticDependenciesID=025abf411e18fde3c96cd4fb0c9e25ab 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Assets/Furniture/Machines/Sanitising Machine - Green Light (64x96) .PNG.png
-  importAddress: Guid(58cf5d96f6ecd69488a5d44f0a7ca7fa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Assets/Furniture/Machines/Sanitising Machine - Green Light (64x96) .PNG.png using Guid(58cf5d96f6ecd69488a5d44f0a7ca7fa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'fb515f984fb4c92513b64d5d62af3100') in 0.0245502 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1d77f823921db21161ee4c7b955fc357 DependenciesID=961098c8f1d64054ecc728b0d88111fa StaticDependenciesID=c3c12e21162e007a50e2e5cd8e5bdcf1 
+  Time since last request: 0.000023 seconds.
+  path: Assets/Assets/ShopItems/Bookshelf (32x32).png
+  importAddress: Guid(33999db689247b64a97162faea93956b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Assets/ShopItems/Bookshelf (32x32).png using Guid(33999db689247b64a97162faea93956b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '317f8f521ef8d0f80a46f1bf67dd9221') in 0.0438993 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a053964ad84d667d3890c2c85e0f5d35 DependenciesID=f671a83e512a312fdf50a85e2d662290 StaticDependenciesID=7b9214db30a3c76297217743e9bb7ccd 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/Assets/ShopItems/Info Stand (16x32).png
-  importAddress: Guid(9ebbd362a70a7644abb0f8a59e7d291a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Assets/ShopItems/Info Stand (16x32).png using Guid(9ebbd362a70a7644abb0f8a59e7d291a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '941a9c0177ac6a26e07328a89a225e60') in 0.0071914 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=db969adbda97e85db4f0cd9d946eb970 DependenciesID=e57c40d416b6991f86fa3c89ed3f1d8f StaticDependenciesID=13b1bec6ee168b79d965481c0586082a 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Scripts/DivingSystem/IngredientType.cs
-  importAddress: Guid(3e2d807f00c3746449dba98931574295) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Scripts/DivingSystem/IngredientType.cs using Guid(3e2d807f00c3746449dba98931574295) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '61a2a0b57590a1afb27c8ca3f88cdfe0') in 0.003795 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4f8583748a94c578ec3d4154cfa6a0b8 DependenciesID=3d7761c5b2d810871fa89f785b70f422 StaticDependenciesID=891a0f269ced350cfe1a2e70ba0ca635 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Assets/Furniture/Machines/Reproducing Machine - Red Light (64x96) .PNG.png
-  importAddress: Guid(899d7803ad8ed824eb9d64a6c26982f1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Assets/Furniture/Machines/Reproducing Machine - Red Light (64x96) .PNG.png using Guid(899d7803ad8ed824eb9d64a6c26982f1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '303dca43dcf9d578de738f9a48ba6d14') in 0.0058172 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e33c0081b43ec8c351ddd11a5570e181 DependenciesID=206e87dffec44431cb549a17a670366e StaticDependenciesID=c51931c6d8215f0a34269ba620771e43 
+  Time since last request: 0.000027 seconds.
+  path: Assets/Assets/Furniture/Tank/Large Tank (96x64).png
+  importAddress: Guid(aa8b74248fbf96e4790c0d75d684b45a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Assets/Furniture/Tank/Large Tank (96x64).png using Guid(aa8b74248fbf96e4790c0d75d684b45a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '12c4b893d0e034a0522f203cc9da845e') in 0.0061498 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1a4e3657a73125a35ddf65ded7d907c1 DependenciesID=8c38e63b5683d808af341a40d0942edc StaticDependenciesID=bd3801220a2d8586e1317e28b3edd513 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000018 seconds.
-  path: Assets/Assets/Fish/SeaHorse Design 1 (16x24) .PNG.png
-  importAddress: Guid(33059621dac6e02468ec1deac65ac824) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Assets/Fish/SeaHorse Design 1 (16x24) .PNG.png using Guid(33059621dac6e02468ec1deac65ac824) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '3bf5629bf2ee54533aec28c8c8c5d00a') in 0.0075933 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=710440678dde243100956865dfa99294 DependenciesID=041f6e6977d9b9ef1580ace86dbb71db StaticDependenciesID=12453cbaaced9fd1f6f8d4d6907789ac 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Assets/Flooring/Floor Tile 1 - Lab Room (16x16) .PNG.png
-  importAddress: Guid(a42f8054f505ce44f92513a2392706da) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Assets/Flooring/Floor Tile 1 - Lab Room (16x16) .PNG.png using Guid(a42f8054f505ce44f92513a2392706da) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'dbe89e2006048bb81b117060f7a90c62') in 0.0053946 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=34e36d7351c291ce696d02974e7a5291 DependenciesID=ed1bbb2b2421d22bcd0fb89e741a51dc StaticDependenciesID=b7ff1bb6d5a60b546a764dac2009c043 
+  path: Assets/Assets/ShopItems/Small Bin (16x16).png
+  importAddress: Guid(0d1053e72a839464c811aec586b8d658) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Assets/ShopItems/Small Bin (16x16).png using Guid(0d1053e72a839464c811aec586b8d658) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f676149669601e468b96d47a088a78b1') in 0.0087507 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3dcc73a5b86da9ffaf60c190b858ad5c DependenciesID=c176993f8413c5495edfb2483b35b24a StaticDependenciesID=263dc49c039d24f822ba41cd981ab6df 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000014 seconds.
-  path: Assets/Assets/Flooring/Floor Tile 2 - Lab Room (16x16) .PNG.png
-  importAddress: Guid(310ca8fb39d200940aa121c2db201494) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Assets/Flooring/Floor Tile 2 - Lab Room (16x16) .PNG.png using Guid(310ca8fb39d200940aa121c2db201494) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'b3e837e05e10c52a6ce6407df6e658e9') in 0.0060839 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3be22e804b910a0f7e786fa085623c82 DependenciesID=b7ac6e1b1e625f8d2fa1a0394e1130fe StaticDependenciesID=70d407e2aa61c0c1eddf7e17793bf64c 
+  path: Assets/Assets/ShopItems/Small Potted Plant (16x24).png
+  importAddress: Guid(aa1ba7419ae161940899daf5de026aee) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Assets/ShopItems/Small Potted Plant (16x24).png using Guid(aa1ba7419ae161940899daf5de026aee) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '9d0556e56fc2cee0050d06010069e325') in 0.0066862 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=43a66190c79043095b93a87810451d34 DependenciesID=f33531205ecf5fc368a9f55c15283066 StaticDependenciesID=b6ec43b32b398dfd8b5fbf2105f966bb 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Assets/Furniture/Machines/Processor Machine - Green Light (64x96) .PNG.png
-  importAddress: Guid(5cb461c9fb12c204c96ac2e0d3fedc94) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Assets/Furniture/Machines/Processor Machine - Green Light (64x96) .PNG.png using Guid(5cb461c9fb12c204c96ac2e0d3fedc94) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'a15369a2bd5504df8962fc549349d2cb') in 0.0067811 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2acfdf12cdc3938380e82cfa7c49d1d2 DependenciesID=70f3d3662d84b3d1296ac59b2689c8c6 StaticDependenciesID=51fdff9d57af88712e559508518979d0 
+  Time since last request: 0.000015 seconds.
+  path: Assets/Assets/Furniture/Machines/Processor Machine - Red Light (64x96) .PNG.png
+  importAddress: Guid(6a48ebe9c7996234db4c643b23f658bd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Assets/Furniture/Machines/Processor Machine - Red Light (64x96) .PNG.png using Guid(6a48ebe9c7996234db4c643b23f658bd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '1dd22277dd123cfd9b33e30f37bdc975') in 0.0058072 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d01bd2c727f82dadc3665083fc988e92 DependenciesID=9a3e4df59c840761df6760dde412722c StaticDependenciesID=3b9f1e117c97b7c8e81871e9e623982c 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Assets/Furniture/Tank/Medium Tank (64x48).png
+  importAddress: Guid(86414f2bb6da49243a04f121d5c4d816) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Assets/Furniture/Tank/Medium Tank (64x48).png using Guid(86414f2bb6da49243a04f121d5c4d816) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '7af075d6913390fedf2e9ebf4f6631f8') in 0.0058031 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7603e0b3854f77d3d08f04a2243b3de8 DependenciesID=e7f3d43e2580ea547852267930005641 StaticDependenciesID=2d64d60d11d11d30d51e4bad91d570fb 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Assets/ShopItems/Large Potted Plant (24x32).png
+  importAddress: Guid(11072c0a908b1254c8bbbd85ff87e59f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Assets/ShopItems/Large Potted Plant (24x32).png using Guid(11072c0a908b1254c8bbbd85ff87e59f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '9e9367bd0393da973a34c26655b4797e') in 0.0055007 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bb21cfe17be27bcc3770f248e561b978 DependenciesID=0c9122e558bf7980505291adeca4fc7d StaticDependenciesID=ce890e7828b175f78fe28620140e7c6f 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Assets/Food/Ingredients Crate (45x36) .PNG.png
+  importAddress: Guid(9ef9aed6bb0faf042958006e98f9c762) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Assets/Food/Ingredients Crate (45x36) .PNG.png using Guid(9ef9aed6bb0faf042958006e98f9c762) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '36e35fb301cbdbc4e252690f9080dca1') in 0.0075248 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b3d36dfef7cf14588ca70087c421d897 DependenciesID=183a9f991eb0be695ad7d0e1ab7db6cc StaticDependenciesID=6a274383407ebdf43224638a254936a0 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000033 seconds.
-  path: Assets/Scripts/ShopSystem/ShopItem_FoodMachine.asset
-  importAddress: Guid(080e894363e5b784783be58b05f75f0c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Scripts/ShopSystem/ShopItem_FoodMachine.asset using Guid(080e894363e5b784783be58b05f75f0c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '1b9477cc0431cf5572b650ed02991d6a') in 0.0136871 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0f25a2aadfd4925b31b5bdb18d8d31e2 DependenciesID=47e5cd521841beea176cd62351f6d1aa StaticDependenciesID=a2672688e3f74b90099b77d595d86509 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+  path: Assets/Assets/Flooring/Wall Panel - Lab Room (16x48) .PNG.png
+  importAddress: Guid(37052f1ced2e0ae49b4863fda49a84b9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Assets/Flooring/Wall Panel - Lab Room (16x48) .PNG.png using Guid(37052f1ced2e0ae49b4863fda49a84b9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '1091177d63fe522dc560ec73811f551f') in 0.0063783 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8bf94d5de12cbd861604de612052097f DependenciesID=e0ddcda40c4518bb4ef2b1a5f3acd3b5 StaticDependenciesID=e1a89537451cabd152cda9774587642c 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Assets/Furniture/Machines/Sanitising Machine - Red Light (64x96) .PNG.png
-  importAddress: Guid(2a7f7a93f49e2304793b03253c308e50) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Assets/Furniture/Machines/Sanitising Machine - Red Light (64x96) .PNG.png using Guid(2a7f7a93f49e2304793b03253c308e50) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'ce9e033a632b9e68fc70c21f5f32f275') in 0.0107907 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4da313cde95351ffd9794336e9f4b940 DependenciesID=497058847534a04107661e1c3e7bff97 StaticDependenciesID=583e26ce034e1a24de92cb532ffdf0de 
+  Time since last request: 0.000015 seconds.
+  path: Assets/Assets/Furniture/Tank/Small Tank (48x32) .png
+  importAddress: Guid(2a7025eaff5f991419b549c5679e81a1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Assets/Furniture/Tank/Small Tank (48x32) .png using Guid(2a7025eaff5f991419b549c5679e81a1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '4d6c45d43170c017f4588a3e09d9136e') in 0.0091336 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=91b3ae526945ca5fd728f4d9d47ed67f DependenciesID=aa2a1136f9d65395e0ff6b612c62ac24 StaticDependenciesID=6c9f7ea0daddc9aefa657c4d2879fe56 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Assets/Furniture/Machines/Bubbles For Sanitising Machine (32x16) .PNG.png
+  importAddress: Guid(45fdfca322e1ea943889410f3f51a003) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Assets/Furniture/Machines/Bubbles For Sanitising Machine (32x16) .PNG.png using Guid(45fdfca322e1ea943889410f3f51a003) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '11efd86e14bee4f0259c4ea352bc26b8') in 0.0083571 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d63f50ed486f1c87bc8fe6acdda96ccd DependenciesID=65d51cd37e754003c1ccdc34c4120510 StaticDependenciesID=36b81c8f3a9a7b039011951b514dcbb8 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Assets/Furniture/Machines/Reproducing Machine - Green Light (64x96) .PNG.png
+  importAddress: Guid(7a799904d5b3c3740afe2d7c955757ba) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Assets/Furniture/Machines/Reproducing Machine - Green Light (64x96) .PNG.png using Guid(7a799904d5b3c3740afe2d7c955757ba) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f6b97948988a28e210c227847ddcd5f4') in 0.0060648 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d2a64456835ecb5f3b34fb338db34211 DependenciesID=673d926f586705c6956f9864e9a18f79 StaticDependenciesID=8078bb2d1d1373ac7858d4a535c0c8c8 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Prepare
 Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7458 unused Assets / (5.4 MB). Loaded Objects now: 8340.
-Memory consumption went from 172.4 MB to 167.0 MB.
-Total: 7.044600 ms (FindLiveObjects: 0.806700 ms CreateObjectMapping: 0.285100 ms MarkObjects: 3.828000 ms  DeleteObjects: 2.124200 ms)
+Unloading 7458 unused Assets / (5.1 MB). Loaded Objects now: 8335.
+Memory consumption went from 172.5 MB to 167.4 MB.
+Total: 7.136900 ms (FindLiveObjects: 0.758700 ms CreateObjectMapping: 0.256200 ms MarkObjects: 3.994200 ms  DeleteObjects: 2.127000 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 ========================================================================
@@ -522,6 +506,7 @@ Assembly Unity.UnifiedRayTracing.Editor.Tests.dll at Library/ScriptAssemblies/Un
 Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
 Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
 Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
+Refreshing native plugins compatible for Editor in 2.70 ms, found 5 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
@@ -532,40 +517,41 @@ Native extension for WebGL target not found
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.652 seconds
-Domain Reload Profiling: 1433ms
-	BeginReloadAssembly (207ms)
-		DisableScriptedObjects (11ms)
-		CreateAndSetChildDomain (58ms)
-	RebuildCommonClasses (41ms)
+- Finished resetting the current domain, in  0.655 seconds
+Domain Reload Profiling: 1443ms
+	BeginReloadAssembly (198ms)
+		DisableScriptedObjects (10ms)
+		CreateAndSetChildDomain (59ms)
+	RebuildCommonClasses (48ms)
 	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (58ms)
-	LoadAllAssembliesAndSetupDomain (461ms)
-		LoadAssemblies (340ms)
-		AnalyzeDomain (206ms)
-			TypeCache.Refresh (12ms)
-			BuildScriptInfoCaches (185ms)
-			ResolveRequiredComponents (8ms)
-	FinalizeReload (652ms)
+	initialDomainReloadingComplete (63ms)
+	LoadAllAssembliesAndSetupDomain (466ms)
+		LoadAssemblies (326ms)
+		AnalyzeDomain (216ms)
+			TypeCache.Refresh (13ms)
+			BuildScriptInfoCaches (191ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (655ms)
 		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (133ms)
-			ProcessInitializeOnLoadAttributes (261ms)
-			ProcessInitializeOnLoadMethodAttributes (75ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			BeforeProcessingInitializeOnLoad (131ms)
+			ProcessInitializeOnLoadAttributes (268ms)
+			ProcessInitializeOnLoadMethodAttributes (74ms)
 			AfterProcessingInitializeOnLoad (6ms)
-		AwakeInstancesAfterBackupRestoration (17ms)
-Refreshing native plugins compatible for Editor in 2.04 ms, found 5 plugins.
+		AwakeInstancesAfterBackupRestoration (13ms)
+Refreshing native plugins compatible for Editor in 2.22 ms, found 5 plugins.
 Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7473 unused Assets / (6.1 MB). Loaded Objects now: 8343.
-Memory consumption went from 174.8 MB to 168.7 MB.
-Total: 10.538800 ms (FindLiveObjects: 1.122500 ms CreateObjectMapping: 0.481800 ms MarkObjects: 5.266600 ms  DeleteObjects: 3.666200 ms)
+Unloading 7473 unused Assets / (6.2 MB). Loaded Objects now: 8338.
+Memory consumption went from 175.4 MB to 169.2 MB.
+Total: 11.190700 ms (FindLiveObjects: 1.357600 ms CreateObjectMapping: 0.792600 ms MarkObjects: 5.691800 ms  DeleteObjects: 3.346700 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Prepare
 Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7458 unused Assets / (5.2 MB). Loaded Objects now: 8343.
-Memory consumption went from 177.9 MB to 172.7 MB.
-Total: 9.863500 ms (FindLiveObjects: 1.152100 ms CreateObjectMapping: 0.357000 ms MarkObjects: 5.785900 ms  DeleteObjects: 2.567200 ms)
+Unloading 7458 unused Assets / (5.9 MB). Loaded Objects now: 8338.
+Memory consumption went from 178.6 MB to 172.7 MB.
+Total: 9.759600 ms (FindLiveObjects: 0.825400 ms CreateObjectMapping: 0.250300 ms MarkObjects: 5.294000 ms  DeleteObjects: 3.389000 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout

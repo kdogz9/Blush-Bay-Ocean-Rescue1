@@ -25,6 +25,9 @@ public class BackpackUI : MonoBehaviour
 
     [Header("Style")]
     [SerializeField] private Color headingColour = new Color32(200, 90, 205, 255);
+    
+    [Header("Food Text")]
+    [SerializeField] private TMP_Text fishFoodText;
 
     private bool backpackOpen = false;
     private IngredientBackpack backpack;
@@ -156,6 +159,11 @@ public class BackpackUI : MonoBehaviour
                 "Raw        x" + backpack.SeaweedAmount +
                 "\n" +
                 "Clean      x" + backpack.SanitisedSeaweedAmount;
+        }
+        
+        if (fishFoodText != null)
+        {
+            fishFoodText.text = "Fish Food x" + backpack.FishFoodAmount.ToString();
         }
 
         UpdateNotificationBubble();
