@@ -69,8 +69,8 @@ MonoBehaviour:
     y: 0
     width: 489
     height: 933
-  m_MinSize: {x: 276, y: 76}
-  m_MaxSize: {x: 4001, y: 4026}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -95,8 +95,8 @@ MonoBehaviour:
     y: 0
     width: 328
     height: 641
-  m_MinSize: {x: 201, y: 226}
-  m_MaxSize: {x: 4001, y: 4026}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -271,8 +271,8 @@ MonoBehaviour:
     y: 0
     width: 1103
     height: 641
-  m_MinSize: {x: 202, y: 226}
-  m_MaxSize: {x: 4002, y: 4026}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 16}
@@ -594,7 +594,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/DivingSystem
+    - Assets/Scenes
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -604,29 +604,29 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/DivingSystem
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\GitHub\Blush-Bay-Ocean-Rescue1\Blush bay- Ocean rescue
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 480}
+    scrollPos: {x: 0, y: 420}
     m_SelectedIDs:
-    - m_Data: 70890
+    - m_Data: 54894
     m_LastClickedID:
-      m_Data: 70890
+      m_Data: 54894
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 54504
-    - m_Data: 54506
-    - m_Data: 54508
-    - m_Data: 54510
-    - m_Data: 54512
-    - m_Data: 54514
-    - m_Data: 54516
-    - m_Data: 54518
-    - m_Data: 58278
+    - m_Data: 54750
+    - m_Data: 54752
+    - m_Data: 54754
+    - m_Data: 54756
+    - m_Data: 54758
+    - m_Data: 54760
+    - m_Data: 54762
+    - m_Data: 54764
+    - m_Data: 54766
     - m_Data: 1000000000
     - m_Data: 2147483647
     m_RenameOverlay:
@@ -662,14 +662,15 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 54504
-    - m_Data: 54506
-    - m_Data: 54508
-    - m_Data: 54510
-    - m_Data: 54512
-    - m_Data: 54514
-    - m_Data: 54516
-    - m_Data: 54518
+    - m_Data: 54750
+    - m_Data: 54752
+    - m_Data: 54754
+    - m_Data: 54756
+    - m_Data: 54758
+    - m_Data: 54760
+    - m_Data: 54762
+    - m_Data: 54764
+    - m_Data: 54766
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -834,30 +835,83 @@ MonoBehaviour:
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -33558
-      - m_Data: -33470
-      - m_Data: -31276
-      - m_Data: -26724
-      - m_Data: -25500
-      - m_Data: -23896
-      - m_Data: -21714
-      - m_Data: -16818
-      - m_Data: -3698
-      - m_Data: -3064
+      - m_Data: -73994
+      - m_Data: -69884
+      - m_Data: -69654
+      - m_Data: -69356
+      - m_Data: -69164
+      - m_Data: -68118
+      - m_Data: -67928
+      - m_Data: -67512
+      - m_Data: -67320
+      - m_Data: -66330
+      - m_Data: -66154
+      - m_Data: -64990
+      - m_Data: -64738
+      - m_Data: -64728
+      - m_Data: -64706
+      - m_Data: -64592
+      - m_Data: -64382
+      - m_Data: -55922
+      - m_Data: -55736
+      - m_Data: -47300
+      - m_Data: -46960
+      - m_Data: -45028
+      - m_Data: -44646
+      - m_Data: -43626
+      - m_Data: -43386
+      - m_Data: -28524
+      - m_Data: -28112
+      - m_Data: -27238
+      - m_Data: -26820
+      - m_Data: -23484
+      - m_Data: -23068
       - m_Data: -1410
-      - m_Data: 58916
-      - m_Data: 58932
-      - m_Data: 58940
-      - m_Data: 59450
-      - m_Data: 59790
-      - m_Data: 59974
-      - m_Data: 60190
-      - m_Data: 60392
-      - m_Data: 60432
+      - m_Data: 52674
+      - m_Data: 53102
+      - m_Data: 53132
+      - m_Data: 53598
+      - m_Data: 53914
+      - m_Data: 54164
+      - m_Data: 75600
+      - m_Data: 79944
+      - m_Data: 80076
+      - m_Data: 83692
+      - m_Data: 83862
+      - m_Data: 84012
+      - m_Data: 84438
+      - m_Data: 85662
+      - m_Data: 85832
+      - m_Data: 85982
+      - m_Data: 86268
+      - m_Data: 87844
+      - m_Data: 88014
+      - m_Data: 88164
+      - m_Data: 89730
+      - m_Data: 93032
+      - m_Data: 93954
+      - m_Data: 93960
+      - m_Data: 95434
+      - m_Data: 96412
+      - m_Data: 96446
+      - m_Data: 98066
+      - m_Data: 99044
+      - m_Data: 100416
+      - m_Data: 101490
+      - m_Data: 103326
+      - m_Data: 104532
+      - m_Data: 105286
+      - m_Data: 106562
+      - m_Data: 107254
+      - m_Data: 107476
+      - m_Data: 107540
+      - m_Data: 110452
+      - m_Data: 111262
+      - m_Data: 111728
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Machines
+        m_OriginalName: Machines
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
@@ -865,10 +919,10 @@ MonoBehaviour:
           width: 0
           height: 0
         m_UserData:
-          m_Data: 0
+          m_Data: 111918
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 4
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
         m_ClientGUIView: {fileID: 4}
@@ -1377,9 +1431,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 890.0145, y: 506.54263, z: 1.1343657}
+    m_Target: {x: -1.7938039, y: -1.1242169, z: 0.04118693}
     speed: 2
-    m_Value: {x: 890.0145, y: 506.54263, z: 1.1343657}
+    m_Value: {x: -1.7938039, y: -1.1242169, z: 0.04118693}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1430,9 +1484,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 241.87997
+    m_Target: 5.881296
     speed: 2
-    m_Value: 241.87997
+    m_Value: 5.881296
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1549,15 +1603,15 @@ MonoBehaviour:
       width: 1101
       height: 594
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 659.1976, y: 332.45346}
+    m_Translation: {x: 650.125, y: 326.84473}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -659.1976
-      y: -332.45346
+      x: -650.125
+      y: -326.84473
       width: 1101
       height: 594
     m_MinimalGUI: 1
